@@ -1,3 +1,3 @@
 class Asso < ApplicationRecord
-  has_many :missions
+  has_many :missions, dependent: :destroy
 end

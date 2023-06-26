@@ -7,12 +7,13 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 User.destroy_all
+Asso.destroy_all
 Mission.destroy_all
 
 puts "creating users"
 
 # fileuser1 = URI.open("")
-user1 = User.new(email: "jeanvaljean", password: "password", username: "jeanvaljean")
+user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "jeanvaljean")
 # user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
 
