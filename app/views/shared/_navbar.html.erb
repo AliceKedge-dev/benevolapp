@@ -8,7 +8,7 @@
 
   <%= link_to profile_path do %>
   <div>
-          <% if current_user.photo %>
+          <% if current_user %>
             <%= cl_image_tag current_user.photo.key, class:"profile_link" %>
           <% end %>
       </div>
