@@ -12,9 +12,9 @@ Mission.destroy_all
 
 puts "creating users"
 
-# fileuser1 = URI.open("")
+fileuser1 = URI.open("jean.jpg")
 user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "jeanvaljean")
-# user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
+user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
 
 puts "creating assos"

@@ -1,11 +1,21 @@
 <div class="navbar">
 
-      <%= link_to 'Back', :back, class:"back-link"%>
-
+  <%= link_to :back do %>
+    <%= image_tag "retour.png", class:"back-link"%>
+  <% end %>
+  
     <%# <%= link_to "map", map_path, class:"map-link"%>
 
-
-  <%= link_to 'profile', profile_path, class: "profile-link" %>
-
+  <%= link_to profile_path do %>
+  <div class = "profile_link">
+          <% if current_user %>
+          <% if current_user.photo %>
+            <%= image_tag current_user.photo, class: "profile_pic" %>
+        <% else %>
+          <%= image_tag "default.jpg", class: "profile_pic" %>
+        <% end %>
+        <% end %>
+      </div>
+  <% end %>
 
 </div>
