@@ -12,9 +12,9 @@ Mission.destroy_all
 
 puts "creating users"
 
-# fileuser1 = URI.open("")
+fileuser1 = URI.open("https://i-mom.unimedias.fr/2021/10/21/poudlard_harry_potter_0.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=453&w=806")
 user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "jeanvaljean")
-# user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
+user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
 
 puts "creating assos"
