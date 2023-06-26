@@ -10,9 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_103401) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_105048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "associations", force: :cascade do |t|
+    t.string "nom"
+    t.string "category"
+    t.string "email"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "missions", force: :cascade do |t|
+    t.date "date_création"
+    t.string "nom"
+    t.time "temps"
+    t.string "description"
+    t.string "localisation"
+    t.date "date"
+    t.string "photo_url"
+    t.string "category"
+    t.bigint "association_id", null: false
+    t.integer "participants_max"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["association_id"], name: "index_missions_on_association_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "mission_id", null: false
+    t.date "date_départ"
+    t.date "date_fin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mission_id"], name: "index_reservations_on_mission_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +58,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_103401) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "photo_url"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "missions", "associations"
+  add_foreign_key "reservations", "missions"
+  add_foreign_key "reservations", "users"
 end
