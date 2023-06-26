@@ -9,7 +9,7 @@ class CreateMissions < ActiveRecord::Migration[7.0]
       t.date :date
       t.string :photo_url
       t.string :category
-      t.references :association, null: false, foreign_key: true
+      t.references :asso, null: false, foreign_key: true
       t.integer :participants_max
 
       t.timestamps

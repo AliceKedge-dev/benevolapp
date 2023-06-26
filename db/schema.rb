@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_105048) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_105016) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "associations", force: :cascade do |t|
+  create_table "assos", force: :cascade do |t|
     t.string "nom"
     t.string "category"
     t.string "email"
@@ -32,11 +32,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_105048) do
     t.date "date"
     t.string "photo_url"
     t.string "category"
-    t.bigint "association_id", null: false
+    t.bigint "asso_id", null: false
     t.integer "participants_max"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["association_id"], name: "index_missions_on_association_id"
+    t.index ["asso_id"], name: "index_missions_on_asso_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -64,7 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_105048) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "missions", "associations"
+  add_foreign_key "missions", "assos"
   add_foreign_key "reservations", "missions"
   add_foreign_key "reservations", "users"
 end

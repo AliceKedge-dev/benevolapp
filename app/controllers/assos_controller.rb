@@ -1,0 +1,2 @@
+class AssosController < ApplicationController
+end
