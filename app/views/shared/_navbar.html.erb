@@ -1,11 +1,17 @@
 <div class="navbar">
 
-      <%= link_to 'Back', :back, class:"back-link"%>
+  <%= link_to :back do %>
+    <%= image_tag "retour.png", class:"back-link"%>
+  <% end %>
 
     <%# <%= link_to "map", map_path, class:"map-link"%>
 
-
-  <%= link_to 'profile', profile_path, class: "profile-link" %>
-
+  <%= link_to profile_path do %>
+  <div>
+          <% if current_user.photo %>
+            <%= cl_image_tag current_user.photo.key, class:"profile_link" %>
+          <% end %>
+      </div>
+  <% end %>
 
 </div>
