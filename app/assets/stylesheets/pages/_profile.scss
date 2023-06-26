@@ -1,0 +1,36 @@
+.user_profile_card{
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ margin-top: 20px;
+}
+
+.profile_name{
+  color: #000;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.pic_profile_card{
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 2px;
+}
+
+.boutons-profil{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+
+.boutons-profil img{
+  width: 60px;
+  height: 60px;
+}

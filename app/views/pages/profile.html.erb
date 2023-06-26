@@ -1,1 +1,28 @@
-<h1>ceci est le profil</h1>
+<div class = "user_profile_card">
+        <% if current_user.photo %>
+          <%= cl_image_tag current_user.photo.key, class: "pic_profile_card" %>
+        <% end %>
+        <h3 class="profile_name"><%= current_user.username %></h3>
+</div>
+
+<div class = "boutons-profil">
+
+    <%= link_to root_path do %>
+      <%= image_tag "msg-btn.png", class:"messages-btn"%>
+    <% end %>
+
+    <%= link_to mesmissions_path do %>
+      <%= image_tag "mesmissions-btn.png", class:"mesmissions-btn"%>
+    <% end %>
+
+    <%= link_to root_path do %>
+      <%= image_tag "settings-btn.png", class:"settings-btn"%>
+    <% end %>
+
+</div>
+
+<div>
+
+<h1>mes badges et progressions</h1>
+
+</div>

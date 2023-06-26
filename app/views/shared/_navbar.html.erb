@@ -3,18 +3,14 @@
   <%= link_to :back do %>
     <%= image_tag "retour.png", class:"back-link"%>
   <% end %>
-  
+
     <%# <%= link_to "map", map_path, class:"map-link"%>
 
   <%= link_to profile_path do %>
-  <div class = "profile_link">
-          <% if current_user %>
+  <div>
           <% if current_user.photo %>
-            <%= image_tag current_user.photo, class: "profile_pic" %>
-        <% else %>
-          <%= image_tag "default.jpg", class: "profile_pic" %>
-        <% end %>
-        <% end %>
+            <%= cl_image_tag current_user.photo.key, class:"profile_link" %>
+          <% end %>
       </div>
   <% end %>
 
