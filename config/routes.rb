@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  get '/missions', to: 'missions#mission'
+  get '/missions', to: 'missions#index'
   get '/mesmissions', to: 'missions#processmission'
 
   get "profile", to: "pages#profile"

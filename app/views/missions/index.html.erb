@@ -1,1 +1,26 @@
-<%= @missions %>
+<h1>FLASH BENEVOLAT <i class="fa-solid fa-bolt" style="color: #ffc21c;"></i></h1>
+
+<div class="card-container">
+  <% @missions.each do |mission| %>
+    <%= content_tag :div, class: 'card' do %>
+      <%= link_to root_path, class: 'card-link' do %>
+        <%= content_tag :div, class: 'card-content' do %>
+        <% if mission.photo.attached?%>
+          <%= cl_image_tag mission.photo.key, height: 300, width: 350, crop: :fill %>
+        <% end %>
+<div class="name-cate-loca-temps">
+<div class="name-cate">
+          <h2 class="card-title"><%= mission.nom %></h2>
+          <p class="card-info card-cate"><%= mission.category %></p>
+</div>
+<div class="loca-temps">
+          <p class="card-info card-loca"><%= mission.localisation %></p>
+          <p class="card-info card-temps"><%= mission.temps %>h</p>
+</div>
+</div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+</div>
