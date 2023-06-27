@@ -1,6 +1,12 @@
 class MissionsController < ApplicationController
   def index
   end
+
+  def show
+    @mission = Mission.find(params[:id])
+    @reservation = Reservation.new
+  end
+
   def new
     @mission = Mission.new
   end
@@ -18,6 +24,14 @@ class MissionsController < ApplicationController
   def delete
     @mission = Mission.find(params[:id])
     @mission.destroy
+  end
+
+  def mesmissions
+    @reservations = current_user.reservations
+    @missions = []
+    @reservations.each do |reservation|
+      @missions << reservation.mission
+    end
   end
 
   private
