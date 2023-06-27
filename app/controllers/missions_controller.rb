@@ -1,5 +1,6 @@
 class MissionsController < ApplicationController
   def index
+    @missions = Mission.all
   end
 
   def show
@@ -37,6 +38,7 @@ class MissionsController < ApplicationController
   private
 
   def missions_params
-    params.require(:mission).permit(:nom, :temps, :photo, :description, :localisation, :date, :category, :date_création, :participants_max)
+    params.require(:mission).permit(:nom, :temps, :photo, :description, :localisation, :date, :category, :date_création,
+    :participants_max)
   end
 end
