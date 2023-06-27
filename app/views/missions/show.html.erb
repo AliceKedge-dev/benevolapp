@@ -1,0 +1,17 @@
+<div class="missions-card">
+  <h1><%= @mission.nom %></h1>
+  <% if @mission.photo.attached?%>
+    <%= cl_image_tag @mission.photo.key, height: 300, width: 350, crop: :fill %>
+  <% end %>
+  <h3><%= @mission.asso.nom %></h3>
+  <p><%= @mission.localisation %></p>
+  <p><%= @mission.description %></p>
+</div>
+
+<% if @mission.users.include?(current_user) %>
+  <h2>Bouton Join the chat</h2>
+<% else %>
+  <%= simple_form_for [@mission, @reservation], class: "clown-form" do |f| %>
+    <%= f.button :submit, "Je participe", class: "blue-button" %>
+  <% end %>
+<% end %>
