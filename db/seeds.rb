@@ -25,7 +25,7 @@ asso1.save
 puts "creating missions"
 
 # filemission1 = URI.open("")
-mission1 = Mission.new(asso: asso1, date_création: "12/02/2023", nom: "refuge", temps: 2, description: "aide au refuge", localisation: "ici", date: "13/06/2023", photo_url: "photo", category: "animal", participants_max: 200 )
+mission1 = Mission.new(asso: asso1, date_création: "12/02/2023", nom: "refuge", temps: 2, description: "aide au refuge", localisation: "16 Villa Gaudelet, Paris", date: "13/06/2023", photo_url: "photo", category: "animal", participants_max: 200 )
 # mission1.photo.attach(io: filemission1, filename: "spa", content_type: "image/png")
 mission1.save
 
