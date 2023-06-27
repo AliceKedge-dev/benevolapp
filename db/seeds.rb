@@ -12,7 +12,7 @@ Mission.destroy_all
 
 puts "creating users"
 
-fileuser1 = URI.open("https://i-mom.unimedias.fr/2021/10/21/poudlard_harry_potter_0.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=453&w=806")
+fileuser1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/t_Profile/v1687535996/production/4rcypmqfdrl15j23r613mopw9wgs.png")
 user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "jeanvaljean")
 user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
