@@ -30,7 +30,7 @@ asso3.save
 
 puts "creating missions"
 
-filemission1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860070/th-5_e4nn3z.jpg")
+filemission1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860070/chien-cage-refuge-spa-full-12643903_sdmz94.jpg")
 mission1 = Mission.new(asso: asso1, date_création: "12/02/2023", nom: "refuge", temps: 2, description: "aide au refuge", localisation: "Quai de Rive Neuve, Marseille", date: "13/06/2023", photo_url: "photo", category: "animal", participants_max: 200, latitude: 43.2922484, longitude: 5.3649312  )
 mission1.photo.attach(io: filemission1, filename: "spaasso", content_type: "image/png")
 mission1.save
