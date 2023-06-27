@@ -3,7 +3,7 @@ class CreateMissions < ActiveRecord::Migration[7.0]
     create_table :missions do |t|
       t.date :date_création
       t.string :nom
-      t.time :temps
+      t.string :temps
       t.string :description
       t.string :localisation
       t.date :date
