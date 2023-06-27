@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :missions, only: [:show, :index] do
     resources :reservations, only: [:new, :create, :show, :index]
   end
+
   get "/profile", to: "pages#profile"
   get "/mesmissions", to: "missions#mesmissions"
 
