@@ -1,4 +1,1 @@
-<%= image_tag "mesmissions.png", height: 30, width: 30, alt: "Logo" %>
-<div class="badge rounded-pill bg-primary fs-6">
-  <%= mission.nom %>
-</div>
+<%= cl_image_tag mission.photo.key, height: 30, width: 30, alt: "Logo", class:"marker" %>
