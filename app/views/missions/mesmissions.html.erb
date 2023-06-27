@@ -1,12 +1,3 @@
-<h1>FLASH BENEVOLAT <i class="fa-solid fa-bolt" style="color: #ffc21c;"></i></h1>
-
-<%= form_tag(root_path, method: :get, class: "search-form") do %>
-  <%= text_field_tag(:query, params[:query], placeholder: "  Rechercher...") %>
-  <button type="submit" class="search-button">
-    <i class="fa-solid fa-magnifying-glass" style="color: #FFFFFF;"></i>
-  </button>
-<% end %>
-
 <div class="card-container">
   <% @missions.each do |mission| %>
     <%= content_tag :div, class: 'card' do %>

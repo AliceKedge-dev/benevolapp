@@ -1,8 +1,10 @@
+<%# <%= image_tag "formeverte.png", class:"messages-btn"%>
+
 <div class = "user_profile_card">
         <% if current_user.photo %>
           <%= cl_image_tag current_user.photo.key, class: "pic_profile_card" %>
         <% end %>
-        <h3 class="profile_name"><%= current_user.username %></h3>
+        <h3 class="profile_name"><%= current_user.username.upcase %></h3>
 </div>
 
 <div class = "boutons-profil">
@@ -21,8 +23,38 @@
 
 </div>
 
-<div>
+  <h1 class = "badge-name">Mes badges et progressions!</h1>
+  <div class = "badge-section">
+        <%= image_tag "badge-patte.png", class:"paw-badge"%>
+        <%= image_tag "badge-social.png", class:"social-badge"%>
+        <%= image_tag "badge-environnement.png", class:"environment-btn"%>
+  </div>
 
-<h1>mes badges et progressions</h1>
+<div class = "progression-card">
+
+<div class="category-name-first pr-1">
+  <h2>ENVIRONNEMENTAL</h2>
+  <p>PROGRESSION EN COURS ...</p>
+  <div class="progress col-8" style="height: 9px">
+    <div class="progress-bar bg-envrn" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<div class="category-name-first pr-1">
+  <h2>SOCIAL</h2>
+  <p>PROGRESSION EN COURS ...</p>
+  <div class="progress col-8" style="height: 9px">
+    <div class="progress-bar bg-social" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<div class="category-name-first pr-1">
+  <h2>ANIMAL</h2>
+  <p>PROGRESSION EN COURS ...</p>
+  <div class="progress col-8" style="height: 9px">
+    <div class="progress-bar bg-animal" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
 
 </div>
