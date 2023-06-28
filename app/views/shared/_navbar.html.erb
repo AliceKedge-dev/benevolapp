@@ -1,10 +1,16 @@
 <div class="navbar">
 
+<div class ="back-home">
   <%= link_to :back do %>
-    <%= image_tag "retour.png", class:"back-link"%>
+    <%= image_tag "back.png", class:"back-link"%>
   <% end %>
 
-    <%# <%= link_to "map", map_path, class:"map-link" %>
+  <%= link_to root_path do %>
+    <%= image_tag("home.png", alt: "Home", class: "home-button") %>
+  <% end %>
+</div>
+
+  <h1>Benevol'App</h1>
 
   <%= link_to profile_path do %>
     <div>
