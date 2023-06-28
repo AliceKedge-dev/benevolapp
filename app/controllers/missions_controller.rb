@@ -1,6 +1,7 @@
 class MissionsController < ApplicationController
   def index
     @missions = Mission.all
+    @assos = Asso.all
   end
 
   def show
@@ -34,6 +35,12 @@ class MissionsController < ApplicationController
       @missions << reservation.mission
     end
   end
+
+  def confirmation
+    @missions = Mission.all
+    @mission = Mission.find(params[:id])
+  end
+
 
   private
 

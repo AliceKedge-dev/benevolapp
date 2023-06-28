@@ -4,6 +4,8 @@ class AssosController < ApplicationController
     @assos = Assos.all
   end
 
+
+
   private
 
   def assos_params
