@@ -19,7 +19,9 @@ user1.save
 
 puts "creating assos"
 
+fileasso1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/t_Profile/v1687535996/production/4rcypmqfdrl15j23r613mopw9wgs.png")
 asso1 = Asso.new(nom: "spa", category: "animal", email: "spa@gmail.com", password: "password")
+asso1.photo.attach(io: fileasso1, filename: "jeanvaljean", content_type: "image/png")
 asso1.save
 
 asso2 = Asso.new(nom: "les restaurants du coeur", category: "social", email: "restauducoeur@gmail.com", password: "password")

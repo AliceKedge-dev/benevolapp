@@ -1,5 +1,14 @@
 <div class="navmap">
 
+<div class ="back-home">
+  <%= link_to :back do %>
+    <%= image_tag "back.png", class:"back-link"%>
+  <% end %>
+
+  <%= link_to root_path do %>
+    <%= image_tag("home.png", alt: "Home", class: "home-button") %>
+  <% end %>
+</div>
 
     <div id="menu">
       <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite" checked="checked" style="display: none">

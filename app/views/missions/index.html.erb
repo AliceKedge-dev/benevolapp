@@ -25,6 +25,11 @@
 <div class="loca-temps">
           <p class="card-info card-loca"><%= mission.localisation %></p>
           <p class="card-info card-temps"><%= mission.temps %>h</p>
+
+          <% if mission.asso.photo.attached?%>
+          <%= cl_image_tag mission.photo.key, height: 50, width: 50, crop: :fill %>
+          <% end %>
+
 </div>
 </div>
         <% end %>

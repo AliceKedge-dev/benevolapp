@@ -1,7 +1,9 @@
 class MissionsController < ApplicationController
   def index
     @missions = Mission.all
+    @assos = Asso.all
   end
+
 
   def show
     @mission = Mission.find(params[:id])

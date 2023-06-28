@@ -1,7 +1,7 @@
 class AssosController < ApplicationController
 
   def index
-    @assos = Assos.all
+    @assos = Asso.all
   end
 
   private
