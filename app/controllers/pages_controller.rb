@@ -8,11 +8,14 @@ class PagesController < ApplicationController
         lat: mission.latitude,
         lng: mission.longitude,
         info_window_html: render_to_string(partial: "info_window",
-      locals: {mission: mission}),
+        locals: {mission: mission}),
         marker_html: render_to_string(partial: "marker",
-      locals: {mission: mission})
+        locals: {mission: mission})
       }
     end
+  end
+
+  def confirmation
   end
 
   def profile
