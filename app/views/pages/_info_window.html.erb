@@ -1,3 +1,13 @@
-<h2><%= mission.nom %></h2>
-<p><%= mission.category %></p>
-<p><%= mission.localisation %></p>
+<div class ="info-window">
+
+<h2><%= mission.nom.capitalize %></h2>
+<p class = "category-info-card"><%= mission.category.capitalize %></p>
+<p class = "localisation-info-card"><%= mission.localisation %></p>
+  
+  <%= link_to mission_path(mission) do %>
+  <%= image_tag("more.png", alt: "Home", class: "more-button") %>
+<% end %>
+
+</div>
+
+

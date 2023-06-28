@@ -1,4 +1,4 @@
-<h1>FLASH BENEVOLAT <i class="fa-solid fa-bolt" style="color: #ffc21c;"></i></h1>
+<h2>FLASH BENEVOLAT <i class="fa-solid fa-bolt" style="color: #ffc21c;"></i></h2>
 
 <%= form_tag(root_path, method: :get, class: "search-form") do %>
   <%= text_field_tag(:query, params[:query], placeholder: "  Rechercher...") %>
@@ -13,7 +13,7 @@
       <%= link_to mission_path(mission), class: 'card-link' do %>
         <%= content_tag :div, class: 'card-content' do %>
         <% if mission.photo.attached?%>
-          <%= cl_image_tag mission.photo.key, height: 300, width: 350, crop: :fill %>
+          <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill %>
         <% end %>
 <div class="name-cate-loca-temps">
 <div class="name-cate">
