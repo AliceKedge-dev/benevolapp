@@ -33,3 +33,27 @@ h1 {
   font-size: 14px;
   margin-right: 30px;
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+  word-wrap: break-word;
+}
+
+a{
+  text-decoration: none;
+}
