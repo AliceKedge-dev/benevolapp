@@ -1,6 +1,40 @@
-<br><br><br>
+<div class="navbar-home">
 
-<%= render "shared/navbar" %>
+  <h1>Benevol'App</h1>
+
+  <style>
+    .dropdown-content {
+      display: none;
+    }
+  </style>
+
+  <div class="dropdown">
+    <%= cl_image_tag current_user.photo.key, class:"profile_link", id: "dropdown-trigger" %>
+    <div class="dropdown-content">
+      <% if user_signed_in? %>
+        <%= link_to "Profil", profile_path, class: "dropdown-item" %>
+        <%= link_to "Déconnexion", destroy_user_session_path, class: "dropdown-item" %>
+      <% else %>
+        <%= link_to "Connexion", new_user_session_path, class: "dropdown-item" %>
+      <% end %>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      event.preventDefault();
+      var dropdownTrigger = document.getElementById("dropdown-trigger");
+      var dropdownContent = document.querySelector(".dropdown-content");
+
+      dropdownTrigger.addEventListener("click", function() {
+        dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
+      });
+    });
+  </script>
+
+</div>
+
+<br><br><br>
 
 <div class="intro">
 <%= image_tag("intro.png", alt: "hello") %>
@@ -24,6 +58,7 @@
   <%= link_to missions_path do %>
     <%= image_tag "trouveuneactivité.png", class:"list_mission"%>
   <% end %>
+
 
   </div>
 

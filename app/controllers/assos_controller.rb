@@ -1,7 +1,10 @@
 class AssosController < ApplicationController
-
   def index
     @assos = Assos.all
+  end
+
+  def show
+    @asso = Asso.find(params[:id])
   end
 
   private
