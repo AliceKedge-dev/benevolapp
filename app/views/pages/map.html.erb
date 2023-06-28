@@ -1,5 +1,6 @@
 <div class="navmap">
 
+
     <div id="menu">
       <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite" checked="checked" style="display: none">
       <label for="satellite-streets-v12">
@@ -14,6 +15,15 @@
       </label>
     </div>
 
+    <%= link_to profile_path do %>
+      <div>
+          <% if current_user %>
+            <%= cl_image_tag current_user.photo.key, class:"profile_link" %>
+          <% end %>
+      </div>
+
+    <% end %>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var satelliteMap = document.getElementById("satellitemap");
@@ -22,8 +32,8 @@
     var mapLogoUncheck = document.getElementById("map-logo-uncheck");
 
     satelliteMap.addEventListener("click", function() {
-      satelliteMap.style.display ="none"
       satelliteCheck.style.display = "inline-block";
+      satelliteMap.style.display ="none"
       mapLogoUncheck.style.display = "inline-block";
       mapLogo.style.display = "none"
     });
@@ -50,7 +60,6 @@
     });
   });
 </script>
-
 
 </div>
 

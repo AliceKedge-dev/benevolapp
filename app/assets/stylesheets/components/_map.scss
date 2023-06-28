@@ -44,9 +44,22 @@
   width: 100%;
   height: 100px;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
 }
 
+.navmap #menu {
+  width: 200px;
+  align-items: center;
+}
+
+#menu label img{
+  text-decoration: none;
+  justify-content: space-between;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
 .profile_link{
   text-decoration: none;
   display: flex;
@@ -59,18 +72,7 @@
   margin-right: 15px;
 }
 
-.navmap #menu {
-  width: 200px;
-  height: 100px;
-}
 
-
-#menu label img{
-  text-decoration: none;
-  justify-content: space-between;
-  margin-left: 15px;
-  display: flex;
-}
 
 .map-fullpage .list_mission-map{
   border-radius: 15px;
