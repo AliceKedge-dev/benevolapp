@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+
   static values = {
     apiKey: String,
     markers: Array
@@ -15,7 +16,17 @@ export default class extends Controller {
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
-}
+
+    const layerList = document.getElementById('menu');
+    const inputs = layerList.getElementsByTagName('input');
+
+    for (const input of inputs) {
+    input.onclick = (layer) => {
+    const layerId = layer.target.id;
+    this.map.setStyle('mapbox://styles/mapbox/' + layerId);
+    };
+    }
+  }
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
@@ -30,8 +41,8 @@ export default class extends Controller {
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(this.map)
-    })
-  }
+      })
+    }
 
     #fitMapToMarkers() {
       const bounds = new mapboxgl.LngLatBounds()
