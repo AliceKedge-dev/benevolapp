@@ -17,7 +17,7 @@ class PagesController < ApplicationController
 
   def confirmation
   end
-
+  
   def profile
   end
 
