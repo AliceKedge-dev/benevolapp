@@ -29,6 +29,7 @@
   font-family: "poppins";
   z-index: 10;
   position: relative;
+  margin-right : 222px;
 }
 
 .nom-app{
@@ -49,7 +50,14 @@ font-weight: 800;
   margin-top: -70px;
   margin-bottom: -15px;
 }
+
 .intro img{
   width: 400px;
   height: 240px;
+}
+
+  .home-map{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }

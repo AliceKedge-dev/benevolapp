@@ -1,0 +1,85 @@
+<div class="navmap">
+
+
+    <div id="menu">
+      <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite" checked="checked" style="display: none">
+      <label for="satellite-streets-v12">
+        <%= image_tag("satellitemap.png", id: "satellitemap") %>
+        <%= image_tag("satellite-check.png", id: "satellite-check", style: "display: none") %>
+      </label>
+
+      <input id="streets-v12" type="radio" name="rtoggle" value="streets" checked="checked" style="display: none">
+      <label for="streets-v12" id="map-logo-label">
+        <%= image_tag("map-logo.png", id: "map-logo") %>
+        <%= image_tag("map-logo-uncheck.png", id: "map-logo-uncheck", style: "display: none") %>
+      </label>
+    </div>
+
+    <%= link_to profile_path do %>
+      <div>
+          <% if current_user %>
+            <%= cl_image_tag current_user.photo.key, class:"profile_link" %>
+          <% end %>
+      </div>
+
+    <% end %>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var satelliteMap = document.getElementById("satellitemap");
+    var satelliteCheck = document.getElementById("satellite-check");
+    var mapLogo = document.getElementById("map-logo");
+    var mapLogoUncheck = document.getElementById("map-logo-uncheck");
+
+    satelliteMap.addEventListener("click", function() {
+      satelliteCheck.style.display = "inline-block";
+      satelliteMap.style.display ="none"
+      mapLogoUncheck.style.display = "inline-block";
+      mapLogo.style.display = "none"
+    });
+
+    mapLogo.addEventListener("click", function() {
+      mapLogoUncheck.style.display = "none";
+      mapLogo.style.display = "inline-block"
+      satelliteCheck.style.display = "none";
+      satelliteMap.style.display ="inline-block"
+    });
+
+    satelliteCheck.addEventListener("click", function() {
+      satelliteCheck.style.display = "none";
+      satelliteMap.style.display ="inline-block"
+      satelliteMap.style.display ="none"
+      satelliteCheck.style.display = "inline-block";
+    });
+
+    mapLogoUncheck.addEventListener("click", function() {
+      mapLogoUncheck.style.display = "none";
+      mapLogo.style.display = "inline-block"
+      satelliteCheck.style.display = "none";
+      satelliteMap.style.display ="inline-block"
+    });
+  });
+</script>
+
+</div>
+
+
+<div class="map-fullpage">
+
+
+  <div class="test" style="width: 100%; height: 90vh"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+
+    <%= link_to mesmissions_path do %>
+      <%= image_tag "mesmissions.png", class:"mes_missions-map"%>
+    <% end %>
+
+    <%= link_to missions_path do %>
+      <%= image_tag "trouveuneactivité.png", class:"list_mission-map"%>
+    <% end %>
+
+  </div>
+
+</div>

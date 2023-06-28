@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get "/profile", to: "pages#profile"
   get "/mesmissions", to: "missions#mesmissions"
+  get "/map", to: "pages#map"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
