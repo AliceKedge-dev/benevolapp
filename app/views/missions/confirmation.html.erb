@@ -1,0 +1,14 @@
+<%= render "shared/navbar" %>
+
+<div><%= link_to confirmation_path do %>
+      <%= image_tag "check.png", class:"check"%>
+    <% end %>
+  <div><p class="paraconfirmation">MERCI d’avoir rejoint cette activité! </p>
+
+
+
+    <p><%= @mission.asso.nom %> à été prévenue de ta venue. Vérifie tes mails, un reminder ainsi que des informations complémentaires
+    t’ont été envoyés !</p>
+
+  </div>
+</div>
