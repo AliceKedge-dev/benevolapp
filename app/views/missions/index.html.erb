@@ -16,6 +16,7 @@
         <%= content_tag :div, class: 'card-content' do %>
         <% if mission.photo.attached?%>
           <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill %>
+          <%= cl_image_tag mission.asso.photo.key, height: 50, width: 50, crop: :fill, class:"card-info card-photo-asso" %>
         <% end %>
 <div class="name-cate-loca-temps">
 <div class="name-cate">

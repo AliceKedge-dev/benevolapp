@@ -37,6 +37,12 @@ class MissionsController < ApplicationController
     end
   end
 
+  def confirmation
+    @missions = Mission.all
+    @mission = Mission.find(params[:id])
+  end
+
+
   private
 
   def missions_params

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   get "/profile", to: "pages#profile"
   get "/mesmissions", to: "missions#mesmissions"
-  get "/confirmation", to: "pages#confirmation"
+  get "/confirmation/:id", to: "missions#confirmation", as: :confirmation
   get "/map", to: "pages#map"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

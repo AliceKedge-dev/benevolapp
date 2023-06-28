@@ -3,7 +3,6 @@ h2 {
   font-size: 30px;
 }
 
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -21,12 +20,17 @@ h2 {
   margin-bottom: 16px;
 }
 
+.card .card-photo-asso{
+  z-index: 2;
+}
+
 .card :hover {
   opacity: 50%;
 }
 
 .card img {
   border-radius: 16px 16px 0px 0px;
+  z-index: 1;
 }
 
 .card-title {

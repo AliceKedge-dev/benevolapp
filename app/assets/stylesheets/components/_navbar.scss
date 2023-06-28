@@ -34,6 +34,29 @@ h1 {
   margin-right: 30px;
 }
 
+<<<<<<< HEAD
+=======
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+  word-wrap: break-word;
+}
+
+>>>>>>> 0346a8108fe8673b113450345d1d5ddb10693a09
 a{
   text-decoration: none;
 }
