@@ -1,4 +1,20 @@
 <%# <%= image_tag "formeverte.png", class:"messages-btn"%>
+<div class="navbar">
+
+<div class ="back-home">
+  <%= link_to :back do %>
+    <%= image_tag "back.png", class:"back-link"%>
+  <% end %>
+
+  <%= link_to root_path do %>
+    <%= image_tag("home.png", alt: "Home", class: "home-button") %>
+  <% end %>
+</div>
+
+  <h1>Benevol'App</h1>
+
+</div>
+
 
 <div class = "user_profile_card">
         <% if current_user.photo %>
