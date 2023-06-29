@@ -11,9 +11,6 @@ Rails.application.routes.draw do
   get '/search', to: 'missions#search'
   get '/missions/filter/:category', to: 'missions#filter', as: 'filter_missions'
 
-
-
-
   # progressions route ("/")
   get "/animal_progression", to: "pages#animal_progression"
   get "/social_progression", to: "pages#social_progression"
