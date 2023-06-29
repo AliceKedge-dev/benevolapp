@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get "/mesmissions", to: "missions#mesmissions"
   get "/confirmation/:id", to: "missions#confirmation", as: :confirmation
   get "/map", to: "pages#map"
-
+  get "/animal_progression", to: "pages#animal_progression"
+  get "/social_progression", to: "pages#social_progression"
+  get "/environnement_progression", to: "pages#environnement_progression"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -1,0 +1,51 @@
+<div class="navbar-progression"></div>
+
+<%= link_to :back do %>
+  <%= image_tag "back.png", class:"back-link"%>
+<% end %>
+
+</div>
+
+
+<h2 class ="envrn-page-name">ENVIRONNEMENT</h2>
+
+<% @missions.each do |mission| %>
+  <% mission.category  == "environnement" %>
+
+<div class = "body-progression">
+
+  <p>PROGRESSION EN COURS ...</p>
+  <div class="category-name-first pr-1">
+    <div class="progress col-8" style="height: 9px">
+      <div class="progress-bar bg-envrn" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <% @missions.each do |mission| %>
+      <%= content_tag :div, class: 'card' do %>
+        <%= link_to mission_path(mission), class: 'card-link' do %>
+          <%= content_tag :div, class: 'card-content' do %>
+            <% if mission.photo.attached?%>
+              <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill %>
+              <%= cl_image_tag mission.asso.photo.key, height: 50, width: 50, crop: :fill, class:"card-info card-photo-asso" %>
+            <% end %>
+            <div class="name-cate-loca-temps">
+              <div class="name-cate">
+                <h2 class="card-title"><%= mission.nom %></h2>
+                <p class="card-info card-cate"><%= mission.category %></p>
+              </div>
+              <div class="loca-temps">
+                <p class="card-info card-loca"><%= mission.localisation %></p>
+                <p class="card-info card-temps"><%= mission.temps %>h</p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<% end %>

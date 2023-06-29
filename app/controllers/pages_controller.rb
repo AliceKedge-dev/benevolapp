@@ -17,7 +17,7 @@ class PagesController < ApplicationController
 
   def confirmation
   end
-  
+
   def profile
   end
 
@@ -33,5 +33,17 @@ class PagesController < ApplicationController
       locals: {mission: mission})
       }
     end
+  end
+
+  def animal_progression
+    @missions = current_user.missions.where(category: "animal")
+  end
+
+  def social_progression
+    @missions = current_user.missions.where(category: "social")
+  end
+
+  def environnement_progression
+    @missions = current_user.missions.where(category: "environnement")
   end
 end

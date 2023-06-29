@@ -41,7 +41,6 @@ class MissionsController < ApplicationController
     @mission = Mission.find(params[:id])
   end
 
-
   private
 
   def missions_params
