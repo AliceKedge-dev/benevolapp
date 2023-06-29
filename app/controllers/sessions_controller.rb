@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
     @user = User.new
+    redirect_to root_path
   end
 
   def create

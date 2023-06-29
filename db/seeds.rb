@@ -57,12 +57,12 @@ mission4.photo.attach(io: filemission4, filename: "spaasso", content_type: "imag
 mission4.save
 
 filemission5 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043743/t%C3%A9l%C3%A9chargement_28_qwuobl.jpg")
-mission5 = Mission.new(asso: asso2, date_création: "28/06/2023", nom: "aide aux sans abris", temps: 2, description: "venez avec nous aider les sans abris de marseille", localisation: "10 Rue Sainte-Victorine, Marseille", date: "30/06/2023", photo_url: "photo", category: "social", participants_max: 300, latitude: 43.3139137, longitude: 5.3822743  )
+mission5 = Mission.new(asso: asso2, date_création: "28/06/2023", nom: "aide aux sans abris", temps: 2, description: "venez avec nous aider les sans abris de marseille", localisation: "Rue Gustave Desplaces, Aix-en-Provence", date: "30/06/2023", photo_url: "photo", category: "social", participants_max: 300, latitude: 43.3139137, longitude: 5.3822743  )
 mission5.photo.attach(io: filemission5, filename: "foodasso", content_type: "image/png")
 mission5.save
 
 filemission6 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043928/t%C3%A9l%C3%A9chargement_29_ab6wks.jpg")
-mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyage de la ville", temps: 3, description: "aidez nous a dépolluer le centre ville", localisation: "19 boulevard Ferdinand de Lesseps, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
+mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyage de la ville", temps: 3, description: "aidez nous a dépolluer le centre ville", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
 mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
 mission6.save
 
