@@ -13,21 +13,32 @@
   </div>
   <h1>btn join</h1>
 
-<% else %>
+  <% else %>
 
   <div class="missions-card-non-inscrit">
-    <h1><%= @mission.nom %></h1>
-    <% if @mission.photo.attached?%>
-      <%= cl_image_tag @mission.photo.key, height: 300, width: 350, crop: :fill %>
-    <% end %>
-    <h3 class="headerpage"><%= @mission.asso.nom %></h3>
-    <p class="time">temps: 3h</p>
-    <p classe="adresse"><%= @mission.localisation %></p>
-    <p class="descri"><%= @mission.description %></p>
+      <h1><%= @mission.nom %></h1>
+      <% if @mission.photo.attached?%>
+        <%= cl_image_tag @mission.photo.key, height: 300, width: 350, crop: :fill %>
+      <% end %>
+      <h3 class="headerpage"><%= @mission.asso.nom %></h3>
+    <div class="ensemble">
+       <%= link_to confirmation_path do %>
+      <%= image_tag "tictac.png", class:"tictac-button"%>
+      <% end %>
+       <%= link_to confirmation_path do %>
+      <%= image_tag "localisation.png", class:"tictac-button"%>
+      <% end %>
+    </div>
+
+    <div class="joker">
+     <p class="time">temps: 3h</p>
+     <p classe="adresse"><%= @mission.localisation %></p>
+    </div>
+      <p class="descri"><%= @mission.description %></p>
   </div>
 
-    <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
-      <%= f.button :submit, "Je participe", class: "submit-button"%>
-    <% end %>
+  <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
+      <%= f.button :submit, "Je participe", class: "submit-button" %>
 
+    <% end %>
 <% end %>
