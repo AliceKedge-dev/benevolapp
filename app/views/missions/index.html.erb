@@ -2,8 +2,6 @@
 
 <h2>FLASH BENEVOLAT <i class="fa-solid fa-bolt" style="color: #ffc21c;"></i></h2>
 
-
-
 <div class="dropdown-filtres">
 <div class="img-filtres">
 <div class="dropdown">
@@ -50,35 +48,22 @@
     <%= content_tag :div, class: 'card' do %>
       <%= link_to mission_path(mission), class: 'card-link' do %>
         <%= content_tag :div, class: 'card-content' do %>
-        <% if mission.photo.attached?%>
-          <%= cl_image_tag mission.asso.photo.key, height: 70, width: 70, crop: :fill, class:"card-info card-photo-asso" %>
-          <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill, class:"card-photo-img"%>
-        <% end %>
-<div class="name-cate-loca-temps">
-<div class="name-cate">
-          <h2 class="card-title"><%= mission.nom %></h2>
-          <p class="card-info card-cate"><%= mission.category %></p>
-</div>
-<div class="loca-temps">
-          <p class="card-info card-loca"><%= mission.localisation %></p>
-          <p class="card-info card-temps"><%= mission.temps %>h</p>
-</div>
-</div>
 
-          <% if mission.photo.attached?%>
-            <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill %>
-            <%= cl_image_tag mission.asso.photo.key, height: 50, width: 50, crop: :fill, class:"card-info card-photo-asso" %>
-          <% end %>
-          <div class="name-cate-loca-temps">
-            <div class="name-cate">
+            <% if mission.photo.attached?%>
+              <%= cl_image_tag mission.asso.photo.key, height: 70, width: 70, crop: :fill, class:"card-info card-photo-asso" %>
+              <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill, class:"card-photo-img"%>
+            <% end %>
+    <div class="name-cate-loca-temps">
+    <div class="name-cate">
               <h2 class="card-title"><%= mission.nom %></h2>
               <p class="card-info card-cate"><%= mission.category %></p>
-            </div>
-            <div class="loca-temps">
+    </div>
+    <div class="loca-temps">
               <p class="card-info card-loca"><%= mission.localisation %></p>
               <p class="card-info card-temps"><%= mission.temps %>h</p>
-            </div>
-          </div>
+    </div>
+    </div>
+
         <% end %>
       <% end %>
     <% end %>
