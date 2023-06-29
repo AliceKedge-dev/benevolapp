@@ -9,6 +9,8 @@
   text-align: center;
   margin-top: 100px;
   font-size: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .secondpara{
@@ -17,4 +19,12 @@
   margin-right: 5px;
   margin-top: 100px;
   font-size: 15px;
+}
+
+.btn-chat-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 63px;
+  margin-top: 25px;
 }
