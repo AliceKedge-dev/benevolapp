@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-evenly;
 }
-
+.joker{
+  display: flex;
+  justify-content: space-evenly;
+}
 .spa {
   display: flex;
   margin-left: 20px;
@@ -12,7 +15,7 @@
   font-weight: bold;
 }
 
-.descri {
+.description {
 display: flex;
 margin-left: 15px;
 margin-right: 15px;
@@ -23,10 +26,10 @@ text-align: justify;
 .submit-button {
   text-align: justify;
   margin-top: 50px ;
-  margin-left: 120px;
+  margin-left: 130px;
   border-radius: 5px;
   font-weight: bold ;
-  background-image: "participe.png";
+  background-color: #9BC6F4;
   }
 
 .adresse{
@@ -35,4 +38,8 @@ text-align: justify;
 }
 .time {
   margin-top: 30px;
+}
+
+.tictac-button {
+border-image-width: 15px;
 }
