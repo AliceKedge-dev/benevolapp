@@ -24,10 +24,12 @@ asso1 = Asso.new(nom: "spa", category: "animal", email: "spa@gmail.com", passwor
 asso1.photo.attach(io: fileasso1, filename: "jeanvaljean", content_type: "image/png")
 asso1.save
 
+
 fileasso2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688033554/pcvytibnr4cqkkw7r4056eeyyvcx-Profile.jpg_ydibbm.png")
 asso2 = Asso.new(nom: "les restaurants du coeur", category: "social", email: "restauducoeur@gmail.com", password: "password")
 asso2.photo.attach(io: fileasso2, filename: "jeanvaljean", content_type: "image/png")
 asso2.save
+
 
 fileasso3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688033550/c5hzyp8yzcv0tuujcxx8ycjyzd06-Profile.jpg_fqe3he.png")
 asso3 = Asso.new(nom: "cleanmycalanques", category: "environnement", email: "clean@gmail.com", password: "password")
@@ -37,7 +39,11 @@ asso3.save
 puts "creating missions"
 
 filemission1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860070/chien-cage-refuge-spa-full-12643903_sdmz94.jpg")
-mission1 = Mission.new(asso: asso1, date_création: "12/02/2023", nom: "refuge", temps: 2, description: "aide au refuge", localisation: "Quai de Rive Neuve, Marseille", date: "13/06/2023", photo_url: "photo", category: "animal", participants_max: 200, latitude: 43.2922484, longitude: 5.3649312  )
+mission1 = Mission.new(asso: asso1, date_création: "12/02/2023", nom: "refuge", temps: 2, description: "Venez aider un refuge
+  dans ces actions du quotidien,
+  passez du temps avec les animaux dans le besoin !
+  Vous pourrez pour le nettoyage des box, faire des jeux et balade
+  leur donner le bain, nourrir les animaux selon leurs besoins et enfin terminer par une petite séance caresse", localisation: "adresse: Quai de Rive Neuve, Marseille", date: "13/06/2023", photo_url: "photo", category: "animal", participants_max: 200, latitude: 43.2922484, longitude: 5.3649312  )
 mission1.photo.attach(io: filemission1, filename: "spaasso", content_type: "image/png")
 mission1.save
 
@@ -67,4 +73,3 @@ mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "im
 mission6.save
 
 puts "AMENOOOOOOOOOOOOOOOOOOOOOOOOO"
-

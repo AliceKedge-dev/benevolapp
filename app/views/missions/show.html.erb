@@ -20,12 +20,14 @@
     <% if @mission.photo.attached?%>
       <%= cl_image_tag @mission.photo.key, height: 300, width: 350, crop: :fill %>
     <% end %>
-    <h3><%= @mission.asso.nom %></h3>
-    <p><%= @mission.localisation %></p>
-    <p><%= @mission.description %></p>
-    </div>
-    <%= simple_form_for [@mission, @reservation], class: "clown-form" do |f| %>
-      <%= f.button :submit, "Je participe", class: "submit-button" %>
+    <h3 class="headerpage"><%= @mission.asso.nom %></h3>
+    <p class="time">temps: 3h</p>
+    <p classe="adresse"><%= @mission.localisation %></p>
+    <p class="descri"><%= @mission.description %></p>
+  </div>
+
+<%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
+      <%= f.button :submit, "Je participe", class: "submit-button",%>
     <% end %>
 
 <% end %>
