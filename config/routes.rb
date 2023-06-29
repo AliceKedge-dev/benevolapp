@@ -9,8 +9,13 @@ Rails.application.routes.draw do
   get "/confirmation/:id", to: "missions#confirmation", as: :confirmation
   get "/map", to: "pages#map"
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # progressions route ("/")
+  get "/animal_progression", to: "pages#animal_progression"
+  get "/social_progression", to: "pages#social_progression"
+  get "/environnement_progression", to: "pages#environnement_progression"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # sessions route ("/")
+  get "/users/sign_in", to: "sessions#new"
+  post "/users/sign_in", to: "sessions#create"
+  get "/users/sign_out", to: "sessions#destroy"
 end

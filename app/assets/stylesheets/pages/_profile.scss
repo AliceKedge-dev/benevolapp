@@ -62,30 +62,37 @@ body {
 .progression-card{
   background-color: #D9D9D9;
   width: 100%;
-  height: 350px;
+  height: 325px;
   margin-top: 40px;
   border-radius: 20px 20px 0 0;
+  padding-top: 10px;
 }
 
-.category-name {
-  text-align: left;
-  margin-top: 20px;
+.category-name-first {
+  margin-top: 10px;
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  margin-right: 20px;
 }
 
-.category-name h2{
-  font-size: 12px;
+.progression-card h2{
+  margin-top: 10px;
   color: #000;
+  font-size: 12px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
-.category-name p {
+.progression-card p {
   color: grey;
   font-size: 10px;
   font-family: 'Poppins', sans-serif;
   text-align: left;
+  margin-left: 15px;
 }
 
 .bg-envrn {
@@ -100,26 +107,11 @@ body {
   background-color: #9BC6F4; /* Couleur de la barre de progression pour la catégorie ANIMAL */
 }
 
-.category-name-first{
-  padding-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-
-}
-
 .category-name-first p{
   color: grey;
   font-size: 10px;
   font-family: 'Poppins', sans-serif;
   text-align: left;
-}
-
-.category-name-first h2{
-  font-size: 12px;
-  color: #000;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
 }
 
 .formeverte{
@@ -159,4 +151,50 @@ body {
 .allbtn{
   margin-top: -300px;
   z-index:10;
+}
+
+.button-envrn{
+  width: 39px;
+  height: 19.162px;
+  border-radius: 4px;
+  background-color: #00C296CC;
+  margin:0;
+  text-align: center;
+  color: black;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button-social{
+  width: 39px;
+  height: 19.162px;
+  border-radius: 4px;
+  background-color: #FFC21CCC;
+  margin:0;
+  text-align: center;
+  color: black;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button-animal{
+  width: 39px;
+  height: 19.162px;
+  border-radius: 4px;
+  background-color: #9BC6F4;
+  margin:0;
+  text-align: center;
+  color: black;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.progress{
+  margin:0;
 }

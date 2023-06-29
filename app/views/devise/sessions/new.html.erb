@@ -1,20 +1,29 @@
-<h2>Log in</h2>
+<div class="loginpage-top">
+  <%= image_tag "forme-bleu-login.png", class:"formebleulogin"%>
+  <h2>BIENVENUE SUR <strong>BENEVOL'APP</strong></h2>
+</div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+<div class ="loginpage-form">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email ", class: "email-input" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password", class: "password-input" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "valider", class:"log-in-btn" %>
+      <%= image_tag "forme-jaune-login.png", class:"formejaunelogin"%>
+        <div class ="deviselinks">
+          <%= render "devise/shared/links" %>
+        </div>
+    </div>
+    <% end %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+    <%= image_tag "forme-verte-login.png", class:"formevertelogin"%>
 
-<%= render "devise/shared/links" %>
+</div>
