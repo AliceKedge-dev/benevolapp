@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   get "/mesmissions", to: "missions#mesmissions"
   get "/confirmation/:id", to: "missions#confirmation", as: :confirmation
   get "/map", to: "pages#map"
+  get '/search', to: 'missions#search'
+  get '/missions/filter/:category', to: 'missions#filter', as: 'filter_missions'
+
+
+
 
   # progressions route ("/")
   get "/animal_progression", to: "pages#animal_progression"

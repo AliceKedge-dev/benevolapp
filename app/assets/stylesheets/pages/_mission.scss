@@ -20,10 +20,6 @@ h2 {
   margin-bottom: 16px;
 }
 
-.card .card-photo-asso{
-  z-index: 2;
-}
-
 .card :hover {
   opacity: 50%;
 }
@@ -91,8 +87,27 @@ h2 {
 
 #query {
   border-radius: 16px;
-  margin-left: 120px;
+  margin-left: 60px;
   margin-top: 15px;
   margin-bottom: 20px;
   border-color: #6d91b8;
+}
+
+.card-photo-asso {
+  position:absolute;z-index:2;
+  margin-left: 300px;
+  margin-top: 15px;
+}
+
+.card-photo-img{
+  border-radius: 50%;
+}
+
+.dropdown-filtres {
+  display: flex;
+}
+
+.img-filtres {
+  margin-left: 20px;
+  margin-top: 16px;
 }

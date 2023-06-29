@@ -21,17 +21,22 @@ class PagesController < ApplicationController
   def profile
   end
 
+  def index
+    @users = User.all
+    @missions = Mission.all
+  end
+
   def map
     @missions = Mission.geocoded
     @markers = @missions.map do |mission|
-      {
-        lat: mission.latitude,
-        lng: mission.longitude,
-        info_window_html: render_to_string(partial: "info_window",
+    {
+      lat: mission.latitude,
+      lng: mission.longitude,
+      info_window_html: render_to_string(partial: "info_window",
       locals: {mission: mission}),
-        marker_html: render_to_string(partial: "marker",
+      marker_html: render_to_string(partial: "marker",
       locals: {mission: mission})
-      }
+    }
     end
   end
 

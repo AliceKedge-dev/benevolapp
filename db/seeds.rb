@@ -13,7 +13,7 @@ Mission.destroy_all
 puts "creating users"
 
 fileuser1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/t_Profile/v1687535996/production/4rcypmqfdrl15j23r613mopw9wgs.png")
-user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "jeanvaljean")
+user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "Melissandre")
 user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
 
@@ -24,12 +24,12 @@ asso1 = Asso.new(nom: "spa", category: "animal", email: "spa@gmail.com", passwor
 asso1.photo.attach(io: fileasso1, filename: "jeanvaljean", content_type: "image/png")
 asso1.save
 
-fileasso2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687879605/production/nyzxt3v9g2qyhps4612onya2n4kh.jpg")
+fileasso2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688033554/pcvytibnr4cqkkw7r4056eeyyvcx-Profile.jpg_ydibbm.png")
 asso2 = Asso.new(nom: "les restaurants du coeur", category: "social", email: "restauducoeur@gmail.com", password: "password")
 asso2.photo.attach(io: fileasso2, filename: "jeanvaljean", content_type: "image/png")
 asso2.save
 
-fileasso3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687879606/production/2upyp7i2xquly4zlsbc8cq5xgtk6.jpg")
+fileasso3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688033550/c5hzyp8yzcv0tuujcxx8ycjyzd06-Profile.jpg_fqe3he.png")
 asso3 = Asso.new(nom: "cleanmycalanques", category: "environnement", email: "clean@gmail.com", password: "password")
 asso3.photo.attach(io: fileasso3, filename: "jeanvaljean", content_type: "image/png")
 asso3.save
@@ -47,7 +47,7 @@ mission2.photo.attach(io: filemission2, filename: "foodasso", content_type: "ima
 mission2.save
 
 filemission3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860070/NETTOYAGES_DE_PLAGE_mwetj6.jpg")
-mission3 = Mission.new(asso: asso3, date_création: "12/02/2023", nom: "nettoyage plage", temps: 2, description: "plage du prado", localisation: "Plages du Prado, Marseille", date: "13/06/2023", photo_url: "photo", category: "environnemental", participants_max: 50, latitude: 43.25540542602539, longitude: 5.374680519104004  )
+mission3 = Mission.new(asso: asso3, date_création: "12/02/2023", nom: "nettoyage plage", temps: 2, description: "plage du prado", localisation: "Plages du Prado, Marseille", date: "13/06/2023", photo_url: "photo", category: "environnement", participants_max: 50, latitude: 43.25540542602539, longitude: 5.374680519104004  )
 mission3.photo.attach(io: filemission3, filename: "cleanasso", content_type: "image/png")
 mission3.save
 
@@ -66,4 +66,5 @@ mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyag
 mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
 mission6.save
 
-puts "AMEN"
+puts "AMENOOOOOOOOOOOOOOOOOOOOOOOOO"
+
