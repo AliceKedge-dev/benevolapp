@@ -51,4 +51,20 @@ mission3 = Mission.new(asso: asso3, date_création: "12/02/2023", nom: "nettoyag
 mission3.photo.attach(io: filemission3, filename: "cleanasso", content_type: "image/png")
 mission3.save
 
+filemission4 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043497/promenades-chiens_mee7a9.jpg")
+mission4 = Mission.new(asso: asso1, date_création: "10/06/2023", nom: "balade de chien", temps: 3, description: "aidez nous a balader nos toutous", localisation: "32 Bd Jard. Zoologique, Marseille", date: "10/06/2023", photo_url: "photo", category: "animal", participants_max: 3, latitude:43.30558, longitude: 5.39744 )
+mission4.photo.attach(io: filemission4, filename: "spaasso", content_type: "image/png")
+mission4.save
+
+filemission5 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043743/t%C3%A9l%C3%A9chargement_28_qwuobl.jpg")
+mission5 = Mission.new(asso: asso2, date_création: "28/06/2023", nom: "aide aux sans abris", temps: 2, description: "venez avec nous aider les sans abris de marseille", localisation: "Rue Gustave Desplaces, Aix-en-Provence", date: "30/06/2023", photo_url: "photo", category: "social", participants_max: 300, latitude: 43.3139137, longitude: 5.3822743  )
+mission5.photo.attach(io: filemission5, filename: "foodasso", content_type: "image/png")
+mission5.save
+
+filemission6 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043928/t%C3%A9l%C3%A9chargement_29_ab6wks.jpg")
+mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyage de la ville", temps: 3, description: "aidez nous a dépolluer le centre ville", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
+mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
+mission6.save
+
 puts "AMENOOOOOOOOOOOOOOOOOOOOOOOOO"
+

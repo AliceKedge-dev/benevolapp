@@ -14,4 +14,6 @@ class ReservationsController < ApplicationController
       render :new
     end
   end
+
+  
 end

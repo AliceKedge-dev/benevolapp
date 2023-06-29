@@ -42,7 +42,6 @@ class MissionsController < ApplicationController
   end
 
 
-
   def search
     @results = Mission.all
     if params[:query].present?
@@ -55,6 +54,7 @@ class MissionsController < ApplicationController
     @category = params[:category]
     @missions = Mission.where(category: @category)
   end
+
 
   private
 

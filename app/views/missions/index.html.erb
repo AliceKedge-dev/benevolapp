@@ -64,9 +64,23 @@
           <p class="card-info card-temps"><%= mission.temps %>h</p>
 </div>
 </div>
+
+          <% if mission.photo.attached?%>
+            <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill %>
+            <%= cl_image_tag mission.asso.photo.key, height: 50, width: 50, crop: :fill, class:"card-info card-photo-asso" %>
+          <% end %>
+          <div class="name-cate-loca-temps">
+            <div class="name-cate">
+              <h2 class="card-title"><%= mission.nom %></h2>
+              <p class="card-info card-cate"><%= mission.category %></p>
+            </div>
+            <div class="loca-temps">
+              <p class="card-info card-loca"><%= mission.localisation %></p>
+              <p class="card-info card-temps"><%= mission.temps %>h</p>
+            </div>
+          </div>
         <% end %>
       <% end %>
     <% end %>
   <% end %>
-
 </div>
