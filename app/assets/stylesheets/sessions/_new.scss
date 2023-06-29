@@ -1,0 +1,91 @@
+.loginpage-top{
+  display: flex;
+  align-items: center;
+}
+
+
+.log-in-btn {
+  width: 104px;
+  height: 38px;
+  background-color: #9BC6F4;
+  color: white;
+  z-index:2;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 40px;
+  padding-top: 10px;
+
+}
+
+.form-inputs {
+  align-items: center;
+  text-align: center;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.form-actions {
+  align-items: center;
+  text-align: center;
+  height: 250px;
+}
+
+.formebleulogin{
+  z-index:1;
+}
+.formejaunelogin{
+  margin-left: 310px;
+}
+
+.formevertelogin{
+  margin-top: 85px;
+}
+
+a{
+  text-decoration: none;
+  color: grey;
+  font-family: 'Poppins';
+}
+
+.form-actions .deviselinks{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -202px;
+  font-size: 12px;
+}
+
+.email-input{
+  background-color: rgba(217, 217, 217, 0.80);
+  border-radius: 4px;
+}
+
+.password-input{
+  background-color: rgba(217, 217, 217, 0.80);
+  border-radius: 4px;
+}
+
+.email{
+  text-align: left;
+  color: #000;
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.password{
+  text-align: left;
+  color: #000;
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

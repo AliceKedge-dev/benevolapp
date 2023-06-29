@@ -42,6 +42,20 @@ class MissionsController < ApplicationController
   end
 
 
+  def search
+    @results = Mission.all
+    if params[:query].present?
+      sql_subquery = "nom ILIKE :query OR localisation ILIKE :query OR category ILIKE :query OR temps ILIKE :query"
+      @results = @results.where(sql_subquery, query: "%#{params[:query]}%")
+    end
+  end
+
+  def filter
+    @category = params[:category]
+    @missions = Mission.where(category: @category)
+  end
+
+
   private
 
   def missions_params
