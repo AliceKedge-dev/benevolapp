@@ -4,6 +4,10 @@
   <%= image_tag "back.png", class:"back-link"%>
 <% end %>
 
+<%= link_to root_path do %>
+    <%= image_tag("home.png", alt: "Home", class: "home-button") %>
+  <% end %>
+
 </div>
 
 <h2 class ="animal-page-name">ANIMAL</h2>
@@ -11,16 +15,18 @@
 <% @missions.each do |mission| %>
   <% mission.category  == "animal" %>
 
-<div class = "body-progression">
+<div class = "progression-card">
 
     <div class ="card-progression">
-      <p>PROGRESSION EN COURS ...</p>
-      <div class="category-name-first pr-1">
-        <div class="progress col-8" style="height: 9px">
-          <div class="progress-bar bg-animal" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-          </div>
+
+    <p class ="titre-progression">PROGRESSION EN COURS ...</p>
+    <div class="category-name-first pr-1">
+      <div class="progress col-8" style="height: 9px">
+        <div class="progress-bar bg-animal" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
         </div>
       </div>
+        <p class ="progression-chiffre">3/3</p>
+    </div>
     </div>
 
     <div class="card-container">
