@@ -1,5 +1,14 @@
 <div class="navmap">
 
+<div class ="back-home">
+  <%= link_to :back do %>
+    <%= image_tag "back.png", class:"back-link"%>
+  <% end %>
+
+  <%= link_to root_path do %>
+    <%= image_tag("home.png", alt: "Home", class: "home-button") %>
+  <% end %>
+</div>
 
     <div id="menu">
       <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite" checked="checked" style="display: none">
@@ -72,9 +81,11 @@
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
-    <%= link_to mesmissions_path do %>
-      <%= image_tag "mesmissions.png", class:"mes_missions-map"%>
-    <% end %>
+    <% if !current_user.missions.empty? %>
+  <%= link_to mesmissions_path do %>
+    <%= image_tag "mesmissions.png", class:"mes_missions"%>
+  <% end %>
+  <% end %>
 
     <%= link_to missions_path do %>
       <%= image_tag "trouveuneactivité.png", class:"list_mission-map"%>

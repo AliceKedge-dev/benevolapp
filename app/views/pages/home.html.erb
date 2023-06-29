@@ -51,9 +51,13 @@
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
+<% if !current_user.missions.empty? %>
   <%= link_to mesmissions_path do %>
     <%= image_tag "mesmissions.png", class:"mes_missions"%>
   <% end %>
+  <% end %>
+
+
 
   <%= link_to missions_path do %>
     <%= image_tag "trouveuneactivité.png", class:"list_mission"%>
