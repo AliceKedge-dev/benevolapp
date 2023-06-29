@@ -1,0 +1,38 @@
+.ensemble{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.spa {
+  display: flex;
+  margin-left: 20px;
+}
+
+.headerpage {
+  font-weight: bold;
+}
+
+.descri {
+display: flex;
+margin-left: 15px;
+margin-right: 15px;
+margin-top: 75px;
+text-align: justify;
+}
+
+.submit-button {
+  text-align: justify;
+  margin-top: 50px ;
+  margin-left: 120px;
+  border-radius: 5px;
+  font-weight: bold ;
+  background-image: "participe.png";
+  }
+
+.adresse{
+  margin-top: 45px;
+  text-align: justify;
+}
+.time {
+  margin-top: 30px;
+}
