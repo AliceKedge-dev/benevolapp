@@ -11,7 +11,7 @@
     <p><%= @mission.localisation %></p>
     <p><%= @mission.description %></p>
   </div>
-  <h2>Bouton Join the chat</h2>
+  <h1>btn join</h1>
 
   <% else %>
 
@@ -39,5 +39,6 @@
 
   <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
       <%= f.button :submit, "Je participe", class: "submit-button" %>
+
     <% end %>
 <% end %>
