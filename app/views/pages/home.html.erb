@@ -30,17 +30,7 @@
 
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      event.preventDefault();
-      var dropdownTrigger = document.getElementById("dropdown-trigger");
-      var dropdownContent = document.querySelector(".dropdown-content");
 
-      dropdownTrigger.addEventListener("click", function() {
-        dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
-      });
-    });
-  </script>
 
 </div>
 
@@ -78,3 +68,15 @@
   </div>
 
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      event.preventDefault();
+      var dropdownTrigger = document.getElementById("dropdown-trigger");
+      var dropdownContent = document.querySelector(".dropdown-content");
+
+      dropdownTrigger.addEventListener("click", function() {
+        dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
+      });
+    });
+  </script>
