@@ -47,12 +47,17 @@ mission1.photo.attach(io: filemission1, filename: "spaasso", content_type: "imag
 mission1.save!
 
 filemission2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860071/Duo-riverain_sdf-femme-trottoir-1_eqq7m1.jpg")
-mission2 = Mission.new(asso: asso2, date_création: "12/02/2023", nom: "distribution de nourriture", temps: "3", description: "aide au restos du coeur", localisation: "41 Rue Jobin, Marseille", date: "13/06/2023", photo_url: "photo", category: "social", participants_max: 250, latitude: 43.3094971, longitude: 5.3903643  )
+mission2 = Mission.new(asso: asso2, date_création: "12/02/2023", nom: "distribution de nourriture", temps: "3", description: " En tant que bénévole, vous serez chargé(e)
+d'accueillir les bénéficiaires dans le centre d'accueil des Restos du Cœur et
+de les aider lors de la distribution alimentaire.", localisation: "41 Rue Jobin, Marseille", date: "13/06/2023", photo_url: "photo", category: "social", participants_max: 250, latitude: 43.3094971, longitude: 5.3903643  )
 mission2.photo.attach(io: filemission2, filename: "foodasso", content_type: "image/png")
 mission2.save!
 
 filemission3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860070/NETTOYAGES_DE_PLAGE_mwetj6.jpg")
-mission3 = Mission.new(asso: asso3, date_création: "12/02/2023", nom: "nettoyage plage", temps: "2", description: "plage du prado", localisation: "Plages du Prado, Marseille", date: "13/06/2023", photo_url: "photo", category: "environnement", participants_max: 50, latitude: 43.25540542602539, longitude: 5.374680519104004  )
+mission3 = Mission.new(asso: asso3, date_création: "12/02/2023", nom: "nettoyage plage", temps: "2", description: "En tant que bénévole au sein de
+  l'association CleanMyCalanques, vous pouvez contribuer activement à la
+  préservation de ces magnifiques espaces naturels. Vous vous occuperez du netotyage des calanques,
+  de sensibiliser les passants et enfin une collecte et un tri des déchets", localisation: "Plages du Prado, Marseille", date: "13/06/2023", photo_url: "photo", category: "environnement", participants_max: 50, latitude: 43.25540542602539, longitude: 5.374680519104004  )
 mission3.photo.attach(io: filemission3, filename: "cleanasso", content_type: "image/png")
 mission3.save!
 
@@ -67,7 +72,11 @@ mission5.photo.attach(io: filemission5, filename: "foodasso", content_type: "ima
 mission5.save!
 
 filemission6 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043928/t%C3%A9l%C3%A9chargement_29_ab6wks.jpg")
-mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyage de la ville", temps: "3", description: "aidez nous a dépolluer le centre ville", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
+mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyage de la ville", temps: "3", description: "En tant que bénévole, vous serez
+impliqué(e) dans des activités
+de nettoyage urbain et de sensibilisation à la
+préservation de l'environnement en centre-ville. Nettoyage des espaces publics et organisation d'événements avec les
+collectivités locales seront au programme. ", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
 mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
 mission6.save!
 
