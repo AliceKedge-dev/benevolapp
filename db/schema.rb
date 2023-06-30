@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_095433) do
   create_table "missions", force: :cascade do |t|
     t.date "date_création"
     t.string "nom"
-    t.string "temps"
+    t.time "temps"
     t.string "description"
     t.string "localisation"
     t.date "date"
