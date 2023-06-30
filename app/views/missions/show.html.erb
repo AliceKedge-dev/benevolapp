@@ -31,7 +31,7 @@
     </div>
 
     <div class="joker">
-     <p class="time">temps: 3h</p>
+     <p class="time"><%=@mission.temps%>h</p>
      <p classe="adresse"><%= @mission.localisation %></p>
     </div>
       <p class="descri"><%= @mission.description %></p>
@@ -39,8 +39,5 @@
 
 <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
       <%= f.button :submit, "Je participe", class: "submit-button"%>
-    <% end %>
-
-
     <% end %>
 <% end %>

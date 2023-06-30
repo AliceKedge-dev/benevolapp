@@ -29,46 +29,9 @@ h2 {
   z-index: 1;
 }
 
-.card-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .card-link {
   text-decoration: none;
   color: inherit;
-}
-
-.name-cate {
-  width: 50%;
-  margin-top: 10px;
-}
-
-.card-cate {
-  font-size: 12px;
-  color: #7a7a7a;
-  margin-right: 30%;
-}
-
-.card-loca {
-  font-size: 12px;
-  color: #2B2A4C;
-  margin-left: 50%;
-}
-
-.loca-temps {
-  width: 50%;
-  margin-top: 10px;
-}
-
-.card-temps {
-  font-size: 15px;
-  color:#000000;
-  margin-left: 50%;
-}
-
-.name-cate-loca-temps {
-  display: flex;
 }
 
 .search-button {
@@ -110,4 +73,65 @@ h2 {
 .img-filtres {
   margin-left: 20px;
   margin-top: 16px;
+}
+
+
+
+
+
+.card-name {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.card-loca{
+  background-color: #9BC6F4;
+  text-decoration: underline;
+  border-bottom-left-radius: 19px;
+  font-size: 11px;
+}
+
+.card-cate{
+  background-color: #00C296;
+  margin-bottom: -1px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.card-tps {
+  background-color: #FFC21C;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 17px;
+  font-size: 20px;
+}
+
+p {
+  color: white;
+}
+
+.icon-loca {
+  padding-top: 10px;
+  background-color: #9BC6F4;
+  color: white;
+  border-bottom-left-radius: 15px;
+}
+
+.icon-cate {
+  padding-top: 10px;
+  background-color: #00C296;
+  color: white;
+}
+
+.icon-tps {
+  padding-top: 10px;
+  background-color: #FFC21C;
+  color: white;
+  border-bottom-right-radius: 15px;
+}
+
+.card-asso {
+  font-size: 10px;
+  color: #777777;
+  margin-bottom: 20px;
 }
