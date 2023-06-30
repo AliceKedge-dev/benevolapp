@@ -5,8 +5,9 @@
 
 
 
+
 <div class="card-container">
-  <% @results.each do |mission| %>
+  <% @results.each do |mission, asso| %>
     <%= content_tag :div, class: 'card' do %>
       <%= link_to mission_path(mission), class: 'card-link' do %>
         <%= content_tag :div, class: 'card-content' do %>
@@ -14,16 +15,26 @@
           <%= cl_image_tag mission.asso.photo.key, height: 70, width: 70, crop: :fill, class:"card-info card-photo-asso" %>
           <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill, class:"card-photo-img"%>
         <% end %>
-<div class="name-cate-loca-temps">
-<div class="name-cate">
-          <h2 class="card-title"><%= mission.nom %></h2>
-          <p class="card-info card-cate"><%= mission.category %></p>
+
+
+    <h2 class="card-name"><%= mission.nom %></h2>
+    <h2 class="card-asso"><%= mission.asso.nom %></h2>
+
+<div class="card-color" style="display: grid; justify-content: space-around; grid-template-columns: 1fr 1fr 1fr;">
+ <div class="icon-loca">
+ <i class="fa-solid fa-location-dot"></i>
+    <p class=" card-loca"><%= mission.localisation %></p>
 </div>
-<div class="loca-temps">
-          <p class="card-info card-loca"><%= mission.localisation %></p>
-          <p class="card-info card-temps"><%= mission.temps %>h</p>
+<div class="icon-cate">
+<i class="fa-solid fa-filter"></i>
+    <p class=" card-cate"><%= mission.category %></p>
+</div>
+<div class="icon-tps">
+<i class="fa-solid fa-clock"></i>
+    <p class=" card-tps"><%= mission.temps %>h</p>
 </div>
 </div>
+
         <% end %>
       <% end %>
     <% end %>
