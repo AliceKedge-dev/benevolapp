@@ -21,23 +21,22 @@
         <%= cl_image_tag @mission.photo.key, height: 350, width: 428, crop: :fill %>
       <% end %>
       <h3 class="headerpage"><%= @mission.asso.nom %></h3>
-    <div class="ensemble">
-       <%= link_to confirmation_path do %>
-      <%= image_tag "tictac.png", class:"tictac-button"%>
-      <% end %>
-       <%= link_to confirmation_path do %>
-      <%= image_tag "localisation.png", class:"loca-card"%>
-      <% end %>
+    <div class=card-info>
+      <div class="ensemble">
+        <%= link_to confirmation_path do %>
+        <%= image_tag "tictac.png", class:"tictac-button"%>
+        <% end %>
+        <%= link_to confirmation_path do %>
+        <%= image_tag "localisation.png", class:"loca-card"%>
+        <% end %>
+      </div>
+      <div class="joker">
+        <p><%= @mission.temps%></p>
+        <p><%= @mission.localisation %></p>
+      </div>
     </div>
   </div>
-
-    <div class="joker">
-      <p class="time"><%= @mission.temps%></p>
-     <p classe="adresse"><%= @mission.localisation %></p>
-    </div>
-    <p class="descri"><%= @mission.description %></p>
-  </div>
-
+  <p class="descri"><%= @mission.description %></p>
 <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
       <%= f.button :submit, "Je participe", class: "submit-button"%>
     <% end %>
