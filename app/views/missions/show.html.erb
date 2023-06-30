@@ -5,20 +5,20 @@
   <div class="missions-card-inscrit">
     <h1><%= @mission.nom %></h1>
     <% if @mission.photo.attached?%>
-      <%= cl_image_tag @mission.photo.key, height: 300, width: 350, crop: :fill %>
+      <%= cl_image_tag @mission.photo.key, height: 350, width: 428, crop: :fill %>
     <% end %>
     <h3><%= @mission.asso.nom %></h3>
     <p><%= @mission.localisation %></p>
     <p><%= @mission.description %></p>
   </div>
-  <h1>btn join</h1>
+  <h1>join the chat </h1>
 
   <% else %>
 
   <div class="missions-card-non-inscrit">
-      <h1><%= @mission.nom %></h1>
+      <h1 class="mission-card"><%= @mission.nom %></h1>
       <% if @mission.photo.attached?%>
-        <%= cl_image_tag @mission.photo.key, height: 300, width: 350, crop: :fill %>
+        <%= cl_image_tag @mission.photo.key, height: 350, width: 428, crop: :fill %>
       <% end %>
       <h3 class="headerpage"><%= @mission.asso.nom %></h3>
     <div class="ensemble">
@@ -26,15 +26,16 @@
       <%= image_tag "tictac.png", class:"tictac-button"%>
       <% end %>
        <%= link_to confirmation_path do %>
-      <%= image_tag "localisation.png", class:"tictac-button"%>
+      <%= image_tag "localisation.png", class:"loca-card"%>
       <% end %>
     </div>
+  </div>
 
     <div class="joker">
-     <p class="time"><%=@mission.temps%>h</p>
+      <p class="time"><%= @mission.temps%></p>
      <p classe="adresse"><%= @mission.localisation %></p>
     </div>
-      <p class="descri"><%= @mission.description %></p>
+    <p class="descri"><%= @mission.description %></p>
   </div>
 
 <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
