@@ -17,6 +17,12 @@ user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username:
 user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
 
+
+fileuser2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687789552/development/vdxip048gp5xevmp8dotcyxlj3yd.jpg")
+user2 = User.new(email: "jeangui@gmail.com", password: "password", username: "jeangui")
+user2.photo.attach(io: fileuser2, filename: "jeangui", content_type: "image/png")
+user2.save
+
 puts "creating assos"
 
 fileasso1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/t_Profile/v1687860070/th-5_e4nn3z.png")

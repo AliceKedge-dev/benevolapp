@@ -19,6 +19,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @chatroom = Chatroom.last
   end
 
   def index
