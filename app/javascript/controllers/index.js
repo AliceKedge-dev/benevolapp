@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import DisplayMoreController from "./display_more_controller"
+application.register("display-more", DisplayMoreController)
+
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 

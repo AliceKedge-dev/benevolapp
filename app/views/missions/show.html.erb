@@ -3,14 +3,34 @@
 <% if @mission.users.include?(current_user) %>
 
   <div class="missions-card-inscrit">
-    <h1><%= @mission.nom %></h1>
-    <% if @mission.photo.attached?%>
-      <%= cl_image_tag @mission.photo.key, height: 350, width: 428, crop: :fill %>
-    <% end %>
-    <h3><%= @mission.asso.nom %></h3>
-    <p><%= @mission.localisation %></p>
-    <p><%= @mission.description %></p>
+        <h1 class="mission-card"><%= @mission.nom %></h1>
+      <% if @mission.photo.attached?%>
+        <%= cl_image_tag @mission.photo.key, height: 300, width: 428, crop: :fill %>
+      <% end %>
+      <h3 class="headerpage"><%= @mission.asso.nom %></h3>
+    <div class=card-info>
+      <div class="ensemble">
+        <%= link_to confirmation_path do %>
+        <%= image_tag "tictac.png", class:"tictac-button"%>
+        <% end %>
+        <p class="pclass"><%= @mission.temps%> heures </p>
+      </div>
+
+    <div class="ensemble">
+        <%= link_to confirmation_path do %>
+          <%= image_tag "localisation.png", class:"loca-card"%>
+        <% end %>
+        <p><%= @mission.localisation %></p>
+    </div>
+    </div>
   </div>
+  <p class="descri"><%= @mission.description %></p>
+  <div class="chat">
+    <%= link_to root_path do %>
+      <%= image_tag "btn-joinchat.png", class:"chat-btn"%>
+    <% end %>
+  </div>
+
   <h1>join the chat </h1>
 <%= link_to cancel_mission_path(@mission), method: :get, data: { confirm: "Êtes-vous sûr de vouloir annuler cette mission ?" }, class: "cancel-button" do %>
   <%= image_tag "cancel.png", class: "image-class" %>
@@ -25,7 +45,7 @@
   <div class="missions-card-non-inscrit">
       <h1 class="mission-card"><%= @mission.nom %></h1>
       <% if @mission.photo.attached?%>
-        <%= cl_image_tag @mission.photo.key, height: 350, width: 428, crop: :fill %>
+        <%= cl_image_tag @mission.photo.key, height: 300, width: 428, crop: :fill %>
       <% end %>
       <h3 class="headerpage"><%= @mission.asso.nom %></h3>
     <div class=card-info>
@@ -33,17 +53,23 @@
         <%= link_to confirmation_path do %>
         <%= image_tag "tictac.png", class:"tictac-button"%>
         <% end %>
+        <p class="pclass"><%= @mission.temps%> heures </p>
+      </div>
+
+    <div class="ensemble">
         <%= link_to confirmation_path do %>
-        <%= image_tag "localisation.png", class:"loca-card"%>
+          <%= image_tag "localisation.png", class:"loca-card"%>
         <% end %>
-      </div>
-      <div class="joker">
-        <p><%= @mission.temps%></p>
         <p><%= @mission.localisation %></p>
-      </div>
+    </div>
     </div>
   </div>
-  <p class="descri"><%= @mission.description %></p>
+  <div data-controller="display-more">
+    <div class="description-togglable-text half-visible" data-display-more-target="text">
+      <p class="descri"><%= @mission.description %></p>
+    </div>
+      <button data-action="click->display-more#displayText">en savoir plus</button>
+  </div>
 <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
       <%= f.button :submit, "Je participe", class: "submit-button"%>
     <% end %>
