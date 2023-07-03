@@ -26,19 +26,19 @@
   </div>
   <p class="descri"><%= @mission.description %></p>
   <div class="chat">
-    <%= link_to root_path do %>
+    <%= link_to chatroom_path(@mission.chatroom) do %>
       <%= image_tag "btn-joinchat.png", class:"chat-btn"%>
     <% end %>
   </div>
 
-  <h1>join the chat </h1>
 <%= link_to cancel_mission_path(@mission), method: :get, data: { confirm: "Êtes-vous sûr de vouloir annuler cette mission ?" }, class: "cancel-button" do %>
   <%= image_tag "cancel.png", class: "image-class" %>
 <% end %>
+ <!-------------------------
 
-<%= link_to chatroom_path(@chatroom) do %>
-     <%= image_tag "btn-joinchat.png", class:"chat-btn"%>
-  <% end %>
+
+ ---------------------->
+
 
   <% else %>
 

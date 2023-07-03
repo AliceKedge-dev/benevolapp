@@ -13,6 +13,7 @@
         <%= cl_image_tag @chatroom.mission.asso.photo.key, height: 70, width: 70, crop: :fill %>
     </div>
   </div>
+
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
@@ -22,8 +23,8 @@
   <div class ="body-show-chatrooms">
     <div class ="message-form">
       <%= simple_form_for [@chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
-        <%= f.input :content, class: "input-message", label: false, placeholder: "Message ##{@chatroom.name}", wrapper_html: { class: "flex-grow-1" } %>
-        <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+        <%= f.input :content, class: "input-message", label: false, placeholder: "Tapez ici ...", wrapper_html: { class: "flex-grow-1" } %>
+        <%= image_submit_tag("send-btn.png", alt: "Send", class: "btn-send mb-3") %>
       <% end %>
     </div>
   </div>
