@@ -52,7 +52,17 @@ class MissionsController < ApplicationController
 
   def filter
     @category = params[:category]
-    @missions = Mission.where(category: @category)
+    @missions = Mission.where(category: @category).distinct
+  end
+
+  def cancel
+    @mission = Mission.find(params[:id])
+    @reservation = Reservation.find_by(
+      mission: @mission,
+      user: current_user
+    )
+    @reservation.destroy
+    redirect_to root_path, notice: "Mission annulée avec succès."
   end
 
 
