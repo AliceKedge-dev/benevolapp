@@ -83,7 +83,7 @@ mission6 = Mission.new(asso: asso3, date_création: "29/06/2023", nom: "nettoyag
 impliqué(e) dans des activités
 de nettoyage urbain et de sensibilisation à la
 préservation de l'environnement en centre-ville. Nettoyage des espaces publics et organisation d'événements avec les
-collectivités locales seront au programme. ", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
+collectivités locales seront au programme. ", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnement", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
 mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
 mission6.save!
 

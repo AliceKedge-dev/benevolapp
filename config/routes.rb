@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   end
   resources :missions, only: [:show, :index] do
     resources :reservations, only: [:new, :create, :show, :index]
+      member do
+        get :cancel
+      end
   end
   get "/profile", to: "pages#profile"
   get "/mesmissions", to: "missions#mesmissions"
