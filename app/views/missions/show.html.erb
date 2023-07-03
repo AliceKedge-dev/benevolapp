@@ -16,6 +16,10 @@
   <%= image_tag "cancel.png", class: "image-class" %>
 <% end %>
 
+<%= link_to chatroom_path(@chatroom) do %>
+     <%= image_tag "btn-joinchat.png", class:"chat-btn"%>
+  <% end %>
+
   <% else %>
 
   <div class="missions-card-non-inscrit">

@@ -1,0 +1,53 @@
+.chatroom-index-nav{
+  background-color: #9BC6F44D;
+  width: 428px;
+  height: 172px;
+}
+
+.chat-général-nom{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.fa{
+  width: 25px;
+  height: 25px;
+}
+
+.chatroom-index-nav h1{
+  color: black;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.container-chatroom{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.chatrooms-link img{
+  width: 203px;
+  height: 203px;
+  border-radius: 203px;
+  border: 4px solid #000;
+  margin-top: 30px;
+}
+
+.chatrooms-link {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+
+.nom-mission-show{
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+}
