@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
-User.destroy_all
-Asso.destroy_all
+Message.destroy_all
 Mission.destroy_all
+Asso.destroy_all
+User.destroy_all
+Chatroom.destroy_all
 
 puts "creating users"
 
@@ -16,6 +18,11 @@ fileuser1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/t_Profil
 user1 = User.new(email: "jeanvaljean@gmail.com", password: "password", username: "Melissandre")
 user1.photo.attach(io: fileuser1, filename: "jeanvaljean", content_type: "image/png")
 user1.save
+
+fileuser2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687789552/development/vdxip048gp5xevmp8dotcyxlj3yd.jpg")
+user2 = User.new(email: "jeangui@gmail.com", password: "password", username: "jeangui")
+user2.photo.attach(io: fileuser2, filename: "jeangui", content_type: "image/png")
+user2.save
 
 puts "creating assos"
 
@@ -79,5 +86,15 @@ préservation de l'environnement en centre-ville. Nettoyage des espaces publics 
 collectivités locales seront au programme. ", localisation: "Rue Antoine Bourdelle, Marseille", date: "3/07/2023", photo_url: "photo", category: "environnemental", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
 mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
 mission6.save!
+
+
+puts "creating chatrooms"
+Chatroom.create!(mission: mission1)
+Chatroom.create!(mission: mission2)
+Chatroom.create!(mission: mission3)
+Chatroom.create!(mission: mission4)
+Chatroom.create!(mission: mission5)
+Chatroom.create!(mission: mission6)
+
 
 puts "AMENOOOOOOOOOOOOOOOOOOOOOOOOO"

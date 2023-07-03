@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
   has_many :missions, through: :reservations
   has_one_attached :photo
+  has_many :messages
+  has_many :chatrooms, through: :messages
 end

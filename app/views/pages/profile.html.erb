@@ -32,7 +32,7 @@
 
 <div class = "boutons-profil">
 
-      <%= link_to chatroom_path do %>
+      <%= link_to chatrooms_path(@chatroom) do %>
         <%= image_tag "msg-btn.png", class:"messages-btn"%>
       <% end %>
 
@@ -67,7 +67,7 @@
     <div class="progress-bar bg-envrn" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
-  <%= link_to  environnement_progression_path do %>
+  <%= link_to environnement_progression_path do %>
     <button class ="button-envrn"></button>
   <% end %>
 </div>
