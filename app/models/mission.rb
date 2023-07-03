@@ -1,5 +1,6 @@
 class Mission < ApplicationRecord
   belongs_to :asso
+  has_one :chatroom
   has_many :reservations, dependent: :destroy
   has_many :users, through: :reservations
   has_one_attached :photo

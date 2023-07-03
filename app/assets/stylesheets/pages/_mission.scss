@@ -86,15 +86,16 @@ h2 {
 }
 
 .card-loca{
-  background-color: #9BC6F4;
   text-decoration: underline;
   border-bottom-left-radius: 19px;
   font-size: 11px;
   color: white;
+  background: linear-gradient(to right, #9BC6F4 50%, #00C296 100%);
+
 }
 
 .card-cate{
-  background-color: #00C296;
+  background: linear-gradient(to right, #00C296 50%, #FFC21C 100%);
   margin-bottom: -1px;
   font-size: 14px;
   margin-top: 5px;
@@ -102,8 +103,8 @@ h2 {
 }
 
 .card-tps {
-  background-color: #FFC21C;
   margin-bottom: -1px;
+  background-color: #FFC21C;
   border-bottom-right-radius: 17px;
   font-size: 20px;
   color: white;
@@ -111,21 +112,21 @@ h2 {
 }
 
 .icon-loca {
+  background: linear-gradient(to right, #9BC6F4 50%, #00C296 100%);
   padding-top: 10px;
-  background-color: #9BC6F4;
   color: white;
   border-bottom-left-radius: 15px;
 }
 
 .icon-cate {
   padding-top: 10px;
-  background-color: #00C296;
+  background: linear-gradient(to right, #00C296 50%, #FFC21C 100%);
   color: white;
 }
 
 .icon-tps {
-  padding-top: 10px;
   background-color: #FFC21C;
+  padding-top: 10px;
   color: white;
   border-bottom-right-radius: 15px;
 }
@@ -134,4 +135,14 @@ h2 {
   font-size: 10px;
   color: #777777;
   margin-bottom: 20px;
+}
+
+.dropdown-item-filter {
+  background-color: white;
+    border-radius: 4px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-right: 55px;
+    padding-bottom: 10px;
+    margin-left: -50px;
 }

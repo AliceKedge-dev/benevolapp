@@ -13,8 +13,6 @@
       <% if user_signed_in? %>
     <% if current_user.photo.attached? %>
     <%= cl_image_tag current_user.photo.key, class:"profile_link", id: "dropdown-trigger" %>
-    <% else  %>
-    <%= image_tag('chien.png') %>
     <% end %>
         <% end %>
 

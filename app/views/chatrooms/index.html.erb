@@ -1,4 +1,5 @@
-<div class="navbar">
+<div class="chatroom-index-nav">
+   <div class="navbar">
 
 <div class ="back-home">
   <%= link_to :back do %>
@@ -12,12 +13,12 @@
 
   <h1>Benevol'App</h1>
 
+
   <style>
   .dropdown-content {
     display: none;
   }
 </style>
-
 
 <div class="dropdown">
   <%= cl_image_tag current_user.photo.key, class:"profile_link", id: "dropdown-trigger" %>
@@ -46,3 +47,23 @@
 
 
 </div>
+
+</div>
+    <div class ="chat-général-nom">
+      <h1>MY CHATS</h1>
+      <i class="fa-regular fa-comment-dots"></i>
+    </div>
+</div>
+
+  <div class ="chatrooms-link">
+    <% @chatrooms.each do |chatroom| %>
+      <div class="container-chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= chatroom.id %>">
+        <%= link_to chatroom_path(chatroom) do %>
+        <%= cl_image_tag chatroom.mission.asso.photo.key, height: 70, width: 70, crop: :fill %>
+        <% end %>
+      </div>
+      <div class="nom-mission-show">
+        <%= chatroom.mission.nom.capitalize %>
+      </div>
+      <% end %>
+  </div>

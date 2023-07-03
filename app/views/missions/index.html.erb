@@ -9,7 +9,7 @@
   <%= image_tag("filtres_bleu.png", alt: "hello", id:"filtres_bleu", style: "display: none")%>
   <div class="dropdown-content">
     <% Mission.all.each do |category| %>
-      <%= link_to category.category, filter_missions_path(category.category), class: "dropdown-item" %>
+      <%= link_to category.category, filter_missions_path(category.category), class: "dropdown-item-filter" %>
     <% end %>
   </div>
 </div>
