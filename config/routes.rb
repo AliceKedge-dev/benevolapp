@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
   resources :missions, only: [:show, :index] do
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   get "/profile", to: "pages#profile"
   get "/mesmissions", to: "missions#mesmissions"
-  get "/confirmation/:id", to: "missions#confirmation", as: :confirmation
+  get "/confirmation", to: "pages#confirmation", as: :confirmation
   get "/map", to: "pages#map"
   get '/search', to: 'missions#search'
   get '/missions/filter/:category', to: 'missions#filter', as: 'filter_missions'

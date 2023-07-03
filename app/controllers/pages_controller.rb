@@ -16,6 +16,8 @@ class PagesController < ApplicationController
   end
 
   def confirmation
+    @mission = Mission.find(params[:mission_id])
+    @chatroom = @mission.chatroom
   end
 
   def profile

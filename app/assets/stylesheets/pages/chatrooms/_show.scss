@@ -1,0 +1,73 @@
+.chatroom-nav-show{
+  background-color: #FFC21C;
+  height: 188px;
+  width: 428px;
+}
+
+.chatroom-nav-show h1{
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.back-link{
+  margin-top: 20px;
+}
+
+.container-chatroom-show{
+  width: 428px;
+}
+
+.asso-mission-pic{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chat-show-nom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1{
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin:0px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.fa-comment-dots{
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  align-items: top;
+}
+
+.body-show-chatrooms .message-form{
+  width: 300px;
+  align-items: center;
+  display: block;
+  margin-top: 100%;
+  margin-left: 20px;
+}
+
+.asso-mission-pic img{
+  border-radius: 85px;
+  border: 2px solid #000;
+  margin-top: 10px;
+}
+
+.body-show-chatrooms{
+  margin-top: 40px;
+  margin-left: 15px;
+}
