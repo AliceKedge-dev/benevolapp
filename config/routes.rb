@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :missions, only: [:show, :index] do
     resources :reservations, only: [:new, :create, :show, :index]
   end
-  get "chatrooms/:id", to: "chatrooms#show"
+  get "chatrooms/:id", to: "chatrooms#show", as: :chatroom_id
   get "/profile", to: "pages#profile"
   get "/mesmissions", to: "missions#mesmissions"
   get "/confirmation/:id", to: "missions#confirmation", as: :confirmation
