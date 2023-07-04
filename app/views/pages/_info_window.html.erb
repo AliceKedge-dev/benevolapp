@@ -3,6 +3,7 @@
 <h2><%= mission.nom.capitalize %></h2>
 <%= cl_image_tag mission.photo.key, height: 140, width: 200, crop: :fill, class:"card-photo-img-info"%>
 
+<p class=" card-tps-date"><%= mission.date %></p>
 <p class = "category-info-card"><%= mission.category.capitalize %></p>
 <p class = "localisation-info-card"><%= mission.localisation %></p>
 
