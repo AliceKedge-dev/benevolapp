@@ -1,19 +1,23 @@
-<%= render "shared/navbar" %>
+<div class ="navbar-confirmation">
+  <%= render "shared/navbar" %>
+</div>
 
-<div><%= link_to confirmation_path do %>
-      <%= image_tag "check.png", class:"check"%>
-    <% end %>
-  <div><p class="paraconfirmation">MERCI d’avoir rejoint cette activité! </p>
-
-    <p class="secondpara"><%= @mission.asso.nom %> à été prévenue de ta venue.
-    Vérifie tes mails, un reminder ainsi que des informations complémentaires
-    t’ont été envoyés !</p>
-
+<div>
+  <%= link_to confirmation_path do %>
+    <%= image_tag "check.png", class:"check"%>
+  <% end %>
+  <div>
+    <p class="paraconfirmation">
+      MERCI d’avoir rejoint cette activité!
+    </p>
+      <p class="secondpara"><strong><%= @mission.asso.nom.capitalize %> </strong>à été prévenue de ta venue.
+      Vérifie tes mails, un reminder ainsi que des informations complémentaires
+      t’ont été envoyés !
+      </p>
     <div class="btn-chat-div">
       <%= link_to chatroom_path(@chatroom) do %>
         <%= image_tag "btn-joinchat.png", class:"chat-btn"%>
       <% end %>
-  </div>
-
+    </div>
   </div>
 </div>
