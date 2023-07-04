@@ -60,9 +60,20 @@ a{
   font-size: 12px;
 }
 
-.email-input{
+.loginpage-form .email-input{
   background-color: rgba(217, 217, 217, 0.80);
   border-radius: 4px;
+  align-items: center;
+  margin-left: 0;
+  width: 210px;
+}
+
+.loginpage-form .password-input{
+  background-color: rgba(217, 217, 217, 0.80);
+  border-radius: 4px;
+  align-items: center;
+  margin-left: 0;
+  width: 210px;
 }
 
 .password-input{
