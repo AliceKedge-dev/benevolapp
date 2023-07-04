@@ -1,4 +1,3 @@
-// Specific CSS for your home-page
 
 .list_mission {
   border-radius: 15px;
@@ -11,13 +10,16 @@
   padding: 10px;
   font-family: "poppins";
   z-index: 10;
-  position: relative;
-  margin-top: 431px;
-  margin-left: 20px;
-  margin-right: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 15%;
+  right: 25%;
+  width: 270px;
 }
 
-.mes_missions {
+
+
+.mes_missions{
   border-radius: 15px;
   text-align: justify;
   text-decoration: none;
