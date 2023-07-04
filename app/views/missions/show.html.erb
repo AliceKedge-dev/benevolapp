@@ -24,7 +24,12 @@
     </div>
     </div>
   </div>
-  <p class="descri"><%= @mission.description %></p>
+   <div data-controller="display-more">
+    <div class="description-togglable-text half-visible" data-display-more-target="text">
+      <p class="descri"><%= @mission.description %></p>
+    </div>
+      <button class="petit_bouton" data-action="click->display-more#displayText">en savoir plus</button>
+  </div>
   <div class="chat">
     <%= link_to chatroom_path(@mission.chatroom) do %>
       <%= image_tag "btn-joinchat.png", class:"chat-btn"%>
@@ -68,7 +73,7 @@
     <div class="description-togglable-text half-visible" data-display-more-target="text">
       <p class="descri"><%= @mission.description %></p>
     </div>
-      <button data-action="click->display-more#displayText">en savoir plus</button>
+      <button class="petit_bouton" data-action="click->display-more#displayText">en savoir plus</button>
   </div>
 <%= simple_form_for [@mission, @reservation], class: "button-form" do |f| %>
       <%= f.button :submit, "Je participe", class: "submit-button"%>
