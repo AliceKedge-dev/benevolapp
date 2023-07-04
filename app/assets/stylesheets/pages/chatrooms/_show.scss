@@ -13,7 +13,7 @@
 }
 
 .back-link{
-  margin-top: 20px;
+  margin-top: 1px;
 }
 
 .container-chatroom-show{
@@ -53,10 +53,18 @@ h1{
   align-items: top;
 }
 
-.body-show-chatrooms .message-form{
+.message-form{
   align-items: center;
   display: block;
-  margin-left: 20px;
+  margin-left: 10px;
+  height: 60px;
+  margin-top: 15px;
+  position: sticky;
+  overflow-y: auto;
+}
+
+.input{
+  margin-top: 15px;
 }
 
 .asso-mission-pic img{
@@ -67,10 +75,45 @@ h1{
 
 .body-show-chatrooms{
   background-color: #D9D9D9;
+  height: 83px;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-control{
+  background-color: #00C296;
+  border-radius: 20px;
+  color: black;
+  width: 268px;
+  height: 37px;
+  margin-left: 40px;
+}
+
+.btn-send{
+  margin-right: 20px;
+  margin-top: 10px;
 }
 
 .messages{
-  min-height: 60vh;
-  margin-top: 35px;
+  margin-top: 40px;
   margin-left: 10px;
+  position: sticky;
+  min-height: 620px !important;
+}
+
+.sticky-form{
+  position: sticky;
+  overflow-y: auto;
+}
+
+.messages p{
+  background-color: #D9D9D9;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
 }

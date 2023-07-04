@@ -1,7 +1,7 @@
 <div class="container-chatroom-show" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <div class="chatroom-nav-show">
     <%= link_to :back do %>
-      <%= image_tag "back.png", class: "back-link" %>
+      <%= image_tag "back.png", class: "back-link-show-msg" %>
     <% end %>
     <h1><strong><%= @chatroom.mission.nom.capitalize %></strong></h1>
       <div class ="chat-show-nom">
@@ -21,11 +21,36 @@
   </div>
 
   <div class ="body-show-chatrooms">
-    <div class ="message-form">
+    <div class ="message-form sticky-form">
       <%= simple_form_for [@chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
         <%= f.input :content, class: "input-message", label: false, placeholder: "Tapez ici ...", wrapper_html: { class: "flex-grow-1" } %>
         <%= image_submit_tag("send-btn.png", alt: "Send", class: "btn-send mb-3") %>
       <% end %>
     </div>
   </div>
+</div>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var messagesElement = document.querySelector('.messages');
+      var stickyFormElement = document.querySelector('.sticky-form');
+      var formHeight = stickyFormElement.offsetHeight;
+
+      function adjustMessagesHeight() {
+        var windowHeight = window.innerHeight;
+        var messagesHeight = messagesElement.offsetHeight;
+        var minHeight = windowHeight - formHeight - 20;
+
+        if (messagesHeight < minHeight) {
+          messagesElement.style.minHeight = minHeight + 'px';
+        }
+      }
+
+      adjustMessagesHeight();
+
+      document.querySelector('form.simple_form').addEventListener('ajax:success', function() {
+        adjustMessagesHeight();
+      });
+    });
+  </script>
 </div>
