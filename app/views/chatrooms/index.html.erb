@@ -1,58 +1,53 @@
 <div class="chatroom-index-nav">
-   <div class="navbar">
 
-<div class ="back-home">
-  <%= link_to :back do %>
-    <%= image_tag "back.png", class:"back-link"%>
-  <% end %>
+  <div class ="nav-chatrooms">
 
-  <%= link_to root_path do %>
-    <%= image_tag("home.png", alt: "Home", class: "home-button") %>
-  <% end %>
-</div>
+    <div class ="back-home">
+      <%= link_to :back do %>
+        <%= image_tag "back.png", class:"back-link"%>
+      <% end %>
 
-  <h1>Benevol'App</h1>
-
-
-  <style>
-  .dropdown-content {
-    display: none;
-  }
-</style>
-
-<div class="dropdown">
-  <%= cl_image_tag current_user.photo.key, class:"profile_link", id: "dropdown-trigger" %>
-  <div class="dropdown-content">
-    <% if user_signed_in? %>
-      <%= link_to "Profil", profile_path, class: "dropdown-item" %>
-      <%= link_to "Déconnexion",  destroy_user_session_path, class: "dropdown-item" %>
-    <% else %>
-      <%= link_to "Connexion",  new_user_session_path, class: "dropdown-item" %>
-    <% end %>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-     event.preventDefault();
-    var dropdownTrigger = document.getElementById("dropdown-trigger");
-    var dropdownContent = document.querySelector(".dropdown-content");
-
-    dropdownTrigger.addEventListener("click", function() {
-      dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
-    });
-  });
-</script>
-
-
-
-</div>
-
-</div>
-    <div class ="chat-général-nom">
-      <h1>MY CHATS</h1>
-      <i class="fa-regular fa-comment-dots"></i>
+      <%= link_to root_path do %>
+        <%= image_tag("home.png", alt: "Home", class: "home-button") %>
+      <% end %>
     </div>
+
+      <style>
+      .dropdown-content {
+        display: none;
+      }
+    </style>
+
+
+    <div class="dropdown">
+      <%= cl_image_tag current_user.photo.key, class:"profile_link", id: "dropdown-trigger" %>
+      <div class="dropdown-content">
+        <% if user_signed_in? %>
+          <%= link_to "Profil", profile_path, class: "dropdown-item" %>
+          <%= link_to "Déconnexion",  destroy_user_session_path, class: "dropdown-item" %>
+        <% else %>
+          <%= link_to "Connexion",  new_user_session_path, class: "dropdown-item" %>
+        <% end %>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        event.preventDefault();
+        var dropdownTrigger = document.getElementById("dropdown-trigger");
+        var dropdownContent = document.querySelector(".dropdown-content");
+
+        dropdownTrigger.addEventListener("click", function() {
+          dropdownContent.style.display = dropdownContent.style.display === "none" ? "block" : "none";
+        });
+      });
+    </script>
+</div>
+      <div class ="chat-général-nom">
+        <h1>MY CHATS</h1>
+        <i class="fa-regular fa-comment-dots"></i>
+      </div>
+
 </div>
 
   <div class ="chatrooms-link">
