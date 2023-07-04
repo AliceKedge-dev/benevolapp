@@ -1,3 +1,13 @@
+.navbar-confirmation{
+  align-items: center;
+}
+
+.back-link {
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+
 .check{
   display: flex;
   align-items: center;
@@ -17,14 +27,15 @@
   text-align: justify;
   margin-left: 10px;
   margin-right: 5px;
-  margin-top: 100px;
-  font-size: 15px;
+  margin-top: 80px;
+  font-size: 18px;
 }
 
 .btn-chat-div{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 63px;
-  margin-top: 25px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 107px;
 }
