@@ -11,7 +11,7 @@
   }
 
 .chat{
-  text-align: justify;
+  text-align: center;
   margin-top: 20px ;
   margin-left: 45px;
 }
@@ -44,11 +44,12 @@ margin-right: 25px;
 
 .submit-button {
   text-align: justify;
-  margin-top: 20px ;
+  margin-top: 40px ;
   margin-left: 150px;
   border-radius: 5px;
   font-weight: bold ;
   background-color: #9BC6F4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
 .tictac-button {
@@ -61,7 +62,7 @@ margin-right: 30px;
 }
 
 .description-togglable-text.half-visible {
-  height: 50px;
+  height: 90px;
 }
 .description-togglable-text:not(half-visible) {
   height: 180px;
@@ -77,8 +78,13 @@ margin-right: 30px;
   margin-left: 140px;
   border-radius: 5px;
   font-weight: bold ;
-  color: white;
-  background-color: #9BC6F4;
+  color: black;
+  background-color: #c2c1c1;
   width: 140px;
+}
+
+.image-class {
+  margin-left: 295px;
+  margin-top: 20px;
 }
 

@@ -6,7 +6,7 @@ class CreateMissions < ActiveRecord::Migration[7.0]
       t.string :temps
       t.string :description
       t.string :localisation
-      t.date :date
+      t.string :date
       t.string :photo_url
       t.string :category
       t.references :asso, null: false, foreign_key: true
