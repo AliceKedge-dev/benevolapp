@@ -48,9 +48,9 @@
 
     <h1 class = "badge-name">Mes badges et progressions!</h1>
     <div class = "badge-section">
-          <%= image_tag "badge-patte.png", class:"paw-badge"%>
-          <%= image_tag "badge-social.png", class:"social-badge"%>
-          <%= image_tag "badge-environnement.png", class:"environment-btn"%>
+      <%= image_tag @url, class:"paw-badge"%>
+      <%= image_tag "badge-social.png", class:"social-badge"%>
+      <%= image_tag "badge-environnement.png", class:"environment-btn"%>
     </div>
 
  <div class ="forme-jaune-profile">
@@ -83,11 +83,11 @@
   <% end %>
 </div>
 
-  <h2>ANIMAL</h2>
-  <p>PROGRESSION EN COURS ...</p>
+<h2>ANIMAL</h2>
+<p>PROGRESSION EN COURS ...</p>
 <div class="category-name-first pr-1">
   <div class="progress col-8" style="height: 9px">
-    <div class="progress-bar bg-animal" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-animal" role="progressbar" style="width: <%= (current_user.animal_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.animal_count %>" aria-valuemin="0" aria-valuemax="3"></div>
   </div>
   <%= link_to animal_progression_path do %>
     <button class ="button-animal"></button>
