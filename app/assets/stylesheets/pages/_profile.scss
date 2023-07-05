@@ -20,7 +20,10 @@ body {
 }
 
 .back-link-profile{
-  margin-left: 10px;
+  text-decoration: none;
+  margin-left: 15px;
+  width: 43px;
+  height: 43px;
 }
 
 .pic_profile_card{
@@ -100,7 +103,7 @@ body {
   margin-left: 15px;
 }
 
-.bg-envrn {
+.bg-environnement{
   background-color: #5AC933 !important;
 }
 
@@ -204,4 +207,8 @@ body {
 
 .progress{
   margin:0;
+}
+
+.progression-card-profile{
+  font-family: 'Poppins', sans-serif;
 }
