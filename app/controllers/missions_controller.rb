@@ -66,7 +66,7 @@ class MissionsController < ApplicationController
       user: current_user
     )
     @reservation.destroy
-    redirect_to root_path, notice: "Mission annulée avec succès."
+    redirect_to profile_path, notice: "La réservation a été annulée avec succès."
   end
 
   private
