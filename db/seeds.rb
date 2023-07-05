@@ -63,6 +63,7 @@ mission2.save!
 
 filemission3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1687860070/NETTOYAGES_DE_PLAGE_mwetj6.jpg")
 mission3 = Mission.new(asso: asso3, date_création: "12/02/2023", nom: "Nettoyage de plage", temps: "2", description: "En tant que bénévole au sein de
+
   l'association CleanMyCalanques, vous pouvez contribuer activement à la
   préservation de ces magnifiques espaces naturels. Vous vous occuperez du netotyage des calanques,
   de sensibiliser les passants et enfin une collecte et un tri des déchets", localisation: "Plages du Prado, Marseille", date: "10/07/2023", photo_url: "photo", category: "Environnement", participants_max: 50, latitude: 43.25540542602539, longitude: 5.374680519104004  )
@@ -70,7 +71,8 @@ mission3.photo.attach(io: filemission3, filename: "cleanasso", content_type: "im
 mission3.save!
 
 filemission4 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688043497/promenades-chiens_mee7a9.jpg")
-mission4 = Mission.new(asso: asso1, date_création: "10/06/2023", nom: "Balade de chien", temps: "3", description: "En tant que bénévole, vous serez impliqué(e)
+mission4 = Mission.new(asso: asso1, date_création: "10/06/2023", nom: "Balade de chiens", temps: "3", description: "En tant que bénévole, vous serez impliqué(e)
+
 dans des actions d'aide à la
 balade des chiens et de soins animaliers
 au sein de la SPA. Balade des chiens, soins, hygiène et sensibilisation à l'adoption sont au programme de cette mission. Venez les animaux n'attendent que vous!!", localisation: "32 Bd Jard. Zoologique, Marseille", date: "21/07/2023", photo_url: "photo", category: "Animal", participants_max: 3, latitude:43.30558, longitude: 5.39744 )
@@ -94,6 +96,32 @@ collectivités locales seront au programme. ", localisation: "Rue Antoine Bourde
 mission6.photo.attach(io: filemission6, filename: "cleanasso", content_type: "image/png")
 mission6.save!
 
+filemission7 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688548296/WhatsApp_Image_2023-07-05_at_11.10.26_cqqkjl.jpg")
+mission7 = Mission.new(asso: asso1, date_création: "16/07/2023", nom: "Opération Bien-être Animal", temps: "3", description: "La SPA lance
+l'opération Bien-être Animal dans le but d'offrir des soins de toilettage aux chiens et aux chats
+résidant dans nos refuges.
+L'objectif principal de cette mission est d'améliorer le bien-être et l'apparence des animaux, en les aidant
+à retrouver leur beauté naturelle.", localisation: "Place de verdun, Aix-en-Provence", date: "13/07/2023", photo_url: "photo", category: "animal", participants_max: 200, latitude: 43.2922484, longitude: 5.3649312  )
+mission7.photo.attach(io: filemission7, filename: "spaasso", content_type: "image/png")
+mission7.save!
+
+filemission8 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688548270/WhatsApp_Image_2023-07-05_at_11.10.25_1_bnixwf.jpg")
+mission8 = Mission.new(asso: asso2, date_création: "28/09/2023", nom: "Atelier cuisine pour tous", temps: "3", description: "Les Restos du Cœur, dans leur volonté d'aider
+  les personnes en situation de précarité, mettent en place un atelier cuisine dans
+  le cadre de leur programme d'accompagnement. Cette mission a pour objectif de
+  permettre aux bénéficiaires d'apprendre à
+  cuisiner des repas équilibrés et économiques.", localisation: "Stade Velodrome, Marseille", date: "30/09/2023", photo_url: "photo", category: "social", participants_max: 300, latitude: 43.3139137, longitude: 5.3822743  )
+mission8.photo.attach(io: filemission8, filename: "foodasso", content_type: "image/png")
+mission8.save!
+
+filemission9 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688548242/WhatsApp_Image_2023-07-05_at_11.10.25_y1v2np.jpg")
+mission9 = Mission.new(asso: asso3, date_création: "20/06/2023", nom: "Sensibilisation dans une école", temps: "4", description: "Clean My Calanque organise une mission de
+  sensibilisation au sein des écoles primaires afin d'éduquer les enfants à l'importance de
+  préserver les calanques et de protéger l'environnement. Cette mission a pour objectif
+  d'inculquer aux enfants de bonnes pratiques écologiques.", localisation: "Avenue de Luminy, Marseille", date: "26/06/2023", photo_url: "photo", category: "environnement", participants_max: 200, latitude: 43.3196019 , longitude: 5.3700485 )
+mission9.photo.attach(io: filemission9, filename: "cleanasso", content_type: "image/png")
+mission9.save!
+
 
 puts "creating chatrooms"
 Chatroom.create!(mission: mission1)
@@ -102,6 +130,10 @@ Chatroom.create!(mission: mission3)
 Chatroom.create!(mission: mission4)
 Chatroom.create!(mission: mission5)
 Chatroom.create!(mission: mission6)
+Chatroom.create!(mission: mission7)
+Chatroom.create!(mission: mission8)
+Chatroom.create!(mission: mission9)
+
 
 
 puts "AMENOOOOOOOOOOOOOOOOOOOOOOOOO"
