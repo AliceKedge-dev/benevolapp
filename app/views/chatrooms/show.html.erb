@@ -3,6 +3,9 @@
     <%= link_to :back do %>
       <%= image_tag "back.png", class: "back-link-show-msg" %>
     <% end %>
+    <%= link_to root_path do %>
+    <%= image_tag("home.png", alt: "Home", class: "home-button-chat") %>
+  <% end %>
     <h1><strong><%= @chatroom.mission.nom.capitalize %></strong></h1>
       <div class ="chat-show-nom">
         <i class="fa-regular fa-comment-dots"></i>
