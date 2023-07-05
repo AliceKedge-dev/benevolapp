@@ -1,65 +1,56 @@
 <div class="navbar-progression">
-
   <%= link_to :back do %>
     <%= image_tag "back.png", class:"back-link"%>
   <% end %>
   <%= link_to root_path do %>
     <%= image_tag("home.png", alt: "Home", class: "home-button") %>
   <% end %>
-
 </div>
 
-<h2 class ="animal-page-name">ANIMAL</h2>
+<h2 class="animal-page-name">ANIMAL</h2>
 
-<% @missions.each do |mission| %>
-  <% mission.category  == "animal" %>
-
-<div class = "progression-card">
-
-    <div class ="card-progression">
-     <p class ="titre-progression">PROGRESSION EN COURS ...</p>
-      <div class="category-name-first pr-1">
-        <div class="progress col-8" style="height: 9px">
-         <div class="progress-bar bg-animal" role="progressbar" style="width: <%= (current_user.animal_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.animal_count %>" aria-valuemin="0" aria-valuemax="3"></div>
+<div class="progression-card-animal">
+  <div class="card-progression">
+    <p class="titre-progression">PROGRESSION EN COURS ...</p>
+    <div class="category-name-first pr-1">
+      <div class="progress col-8" style="height: 9px">
+        <div class="progress-bar bg-animal" role="progressbar" style="width: <%= (current_user.animal_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.animal_count %>" aria-valuemin="0" aria-valuemax="3">
+        </div>
       </div>
       <p class="progression-chiffre"><%= current_user.animal_count %>/3</p>
-      </div>
     </div>
+  </div>
 
-
-    <div class="card-container">
-  <% @missions.each do |mission, asso| %>
-    <%= content_tag :div, class: 'card' do %>
-      <%= link_to mission_path(mission), class: 'card-link' do %>
-        <%= content_tag :div, class: 'card-content' do %>
-        <% if mission.photo.attached?%>
-          <%= cl_image_tag mission.asso.photo.key, height: 70, width: 70, crop: :fill, class:"card-info card-photo-asso" %>
-          <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill, class:"card-photo-img"%>
-        <% end %>
-
-
-    <h2 class="card-name"><%= mission.nom %></h2>
-    <h2 class="card-asso"><%= mission.asso.nom %></h2>
-
-    <div class="card-color" style="display: grid; justify-content: space-around; grid-template-columns: 1fr 1fr 1fr;">
-    <div class="icon-loca">
-    <i class="fa-solid fa-location-dot"></i>
-        <p class=" card-loca"><%= mission.localisation %></p>
-    </div>
-    <div class="icon-cate">
-    <i class="fa-solid fa-filter"></i>
-        <p class=" card-cate"><%= mission.category %></p>
-    </div>
-    <div class="icon-tps">
-    <i class="fa-solid fa-clock"></i>
-        <p class=" card-tps"><%= mission.temps %>h</p>
-    </div>
-    </div>
-
+  <div class="card-container">
+    <% @missions.each do |mission| %>
+      <% if mission.category == "animal" %>
+        <%= content_tag :div, class: 'card' do %>
+          <%= link_to mission_path(mission), class: 'card-link' do %>
+            <%= content_tag :div, class: 'card-content' do %>
+              <% if mission.photo.attached? %>
+                <%= cl_image_tag mission.asso.photo.key, height: 70, width: 70, crop: :fill, class: "card-info card-photo-asso" %>
+                <%= cl_image_tag mission.photo.key, height: 300, width: 386, crop: :fill, class: "card-photo-img" %>
+              <% end %>
+              <h2 class="card-name"><%= mission.nom %></h2>
+              <h2 class="card-asso"><%= mission.asso.nom %></h2>
+              <div class="card-color" style="display: grid; justify-content: space-around; grid-template-columns: 1fr 1fr 1fr;">
+                <div class="icon-loca">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p class="card-loca"><%= mission.localisation %></p>
+                </div>
+                <div class="icon-cate">
+                  <i class="fa-solid fa-filter"></i>
+                  <p class="card-cate"><%= mission.category %></p>
+                </div>
+                <div class="icon-tps">
+                  <i class="fa-solid fa-clock"></i>
+                  <p class="card-tps"><%= mission.temps %>h</p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
-</div>
-<% end %>
