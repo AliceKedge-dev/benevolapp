@@ -5,10 +5,8 @@ class PagesController < ApplicationController
       {
         lat: mission.latitude,
         lng: mission.longitude,
-        info_window_html: render_to_string(partial: "info_window",
-        locals: {mission: mission}),
-        marker_html: render_to_string(partial: "marker",
-        locals: {mission: mission})
+        info_window_html: render_to_string(partial: "info_window", locals: { mission: mission }),
+        marker_html: render_to_string(partial: "marker", locals: { mission: mission })
       }
     end
   end
@@ -20,6 +18,9 @@ class PagesController < ApplicationController
 
   def profile
     @chatroom = Chatroom.last
+    current_user.animal_count < 3 ? @url_animal = "badge-patte-bronze.png" : @url_animal = "badge-patte.png"
+    current_user.social_count < 3 ? @url_social = "badge-social.png" : @url_social = "badge-social-silver.png"
+    current_user.environnement_count < 3 ? @url_environnement = "badge-environnement.png" : @url_environnement = "badge-environnement-silver.png"
   end
 
   def index
@@ -33,10 +34,8 @@ class PagesController < ApplicationController
     {
       lat: mission.latitude,
       lng: mission.longitude,
-      info_window_html: render_to_string(partial: "info_window",
-      locals: {mission: mission}),
-      marker_html: render_to_string(partial: "marker",
-      locals: {mission: mission})
+      info_window_html: render_to_string(partial: "info_window", locals: { mission: mission }),
+      marker_html: render_to_string(partial: "marker", locals: { mission: mission })
     }
     end
   end
