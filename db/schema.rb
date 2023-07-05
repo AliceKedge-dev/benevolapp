@@ -75,7 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_102758) do
     t.string "temps"
     t.string "description"
     t.string "localisation"
-    t.date "date"
+    t.string "date"
     t.string "photo_url"
     t.string "category"
     t.bigint "asso_id", null: false
