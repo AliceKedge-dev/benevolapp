@@ -60,44 +60,80 @@
 
 <div class = "progression-card-profile">
 
-  <h2>ENVIRONNEMENTAL</h2>
-  <p>PROGRESSION EN COURS ...</p>
+ <h2>ENVIRONNEMENTAL</h2>
+<p>PROGRESSION EN COURS ...</p>
 <div class="category-name-first pr-1">
-  <div class="progress col-8" style="height: 9px">
-    <div class="progress-bar bg-environnement" role="progressbar" style="width: <%= (current_user.environnement_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.environnement_count %>" aria-valuemin="0" aria-valuemax="3"></div>
-      </div>
-  <%= link_to environnement_progression_path do %>
-    <button class ="button-envrn">
-      <p class="progression-chiffre" style="margin: 0;text-align: center;"><%= current_user.environnement_count %>/3</p>
-    </button>
+  <% if current_user.environnement_count < 3 %>
+    <div class="progress col-8" style="height: 9px">
+      <div class="progress-bar bg-environnement" role="progressbar" style="width: <%= (current_user.environnement_count.to_f / 6) * 50 %>%" aria-valuenow="<%= current_user.environnement_count %>" aria-valuemin="0" aria-valuemax="3"></div>
+    </div>
+    <%= link_to environnement_progression_path do %>
+      <button class="button-envrn">
+        <p class="progression-chiffre" style="margin: 0;text-align: center;"><%= current_user.environnement_count %>/3</p>
+      </button>
+    <% end %>
+  <% else %>
+    <div class="progress col-8" style="height: 9px">
+      <div class="progress-bar bg-environnement" role="progressbar" style="width: 50%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="6"></div>
+    </div>
+    <%= link_to environnement_progression_path do %>
+      <button class="button-envrn">
+        <p class="progression-chiffre" style="margin: 0;text-align: center;">3/6</p>
+      </button>
+    <% end %>
   <% end %>
 </div>
 
 <h2>SOCIAL</h2>
 <p>PROGRESSION EN COURS ...</p>
 <div class="category-name-first pr-1">
-  <div class="progress col-8" style="height: 9px">
-    <div class="progress-bar bg-social" role="progressbar" style="width: <%= (current_user.social_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.social_count %>" aria-valuemin="0" aria-valuemax="3"></div>
-      </div>
-  <%= link_to social_progression_path do %>
-    <button class ="button-social">
+  <% if current_user.social_count < 3 %>
+    <div class="progress col-8" style="height: 9px">
+      <div class="progress-bar bg-social" role="progressbar" style="width: <%= (current_user.social_count.to_f / 6) * 50 %>%" aria-valuenow="<%= current_user.social_count %>" aria-valuemin="0" aria-valuemax="3"></div>
+    </div>
+    <%= link_to social_progression_path do %>
+      <button class="button-social">
         <p class="progression-chiffre" style="margin: 0; text-align: center;"><%= current_user.social_count %>/3</p>
-    </button>
+      </button>
+    <% end %>
+  <% else %>
+    <div class="progress col-8" style="height: 9px">
+      <div class="progress-bar bg-social" role="progressbar" style="width: 50%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="6"></div>
+    </div>
+    <%= link_to social_progression_path do %>
+      <button class="button-social">
+        <p class="progression-chiffre" style="margin: 0; text-align: center;">3/6</p>
+      </button>
+    <% end %>
   <% end %>
 </div>
+
 
 <h2>ANIMAL</h2>
 <p>PROGRESSION EN COURS ...</p>
 <div class="category-name-first pr-1">
-  <div class="progress col-8" style="height: 9px">
-    <div class="progress-bar bg-animal" role="progressbar" style="width: <%= (current_user.animal_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.animal_count %>" aria-valuemin="0" aria-valuemax="3"></div>
-      </div>
-  <%= link_to animal_progression_path do %>
-    <button class ="button-animal">
-      <p class="progression-chiffre" style="margin: 0;text-align: center;"><%= current_user.animal_count %>/3</p>
-    </button>
+  <% if current_user.animal_count < 3 %>
+    <div class="progress col-8" style="height: 9px">
+      <div class="progress-bar bg-animal" role="progressbar" style="width: <%= (current_user.animal_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.animal_count %>" aria-valuemin="0" aria-valuemax="3"></div>
+    </div>
+    <%= link_to animal_progression_path do %>
+      <button class="button-animal">
+        <p class="progression-chiffre" style="margin: 0; text-align: center;"><%= current_user.animal_count %>/3</p>
+      </button>
+    <% end %>
+  <% else current_user.animal_count > 3%>
+        <div class="progress col-8" style="height: 9px">
+          <div class="progress-bar bg-animal" role="progressbar" style="width: <%= (current_user.animal_count.to_f / 6) * 100 %>%" aria-valuenow="<%= current_user.animal_count %>" aria-valuemin="0" aria-valuemax="6">
+          </div>
+        </div>
+    <%= link_to animal_progression_path do %>
+      <button class="button-animal">
+        <p class="progression-chiffre" style="margin: 0; text-align: center;"><%= current_user.animal_count %>/6</p>
+      </button>
+    <% end %>
   <% end %>
 </div>
+
 
 
 </div>

@@ -14,12 +14,20 @@
   <div class="card-progression">
     <p class="titre-progression">PROGRESSION EN COURS ...</p>
     <div class="category-name-first pr-1">
-      <div class="progress col-8" style="height: 9px">
-        <div class="progress-bar bg-social" role="progressbar" style="width: <%= (current_user.social_count.to_f / 3) * 100 %>%" aria-valuenow="<%= current_user.social_count %>" aria-valuemin="0" aria-valuemax="3"></div>
-      </div>
-      <p class="progression-chiffre"><%= current_user.social_count %>/3</p>
+      <% if current_user.social_count < 3 %>
+        <div class="progress col-8" style="height: 9px">
+          <div class="progress-bar bg-social" role="progressbar" style="width: <%= (current_user.social_count.to_f / 3) * 50 %>%" aria-valuenow="<%= current_user.social_count %>" aria-valuemin="0" aria-valuemax="3"></div>
+        </div>
+        <p class="progression-chiffre"><%= current_user.social_count %>/3</p>
+      <% else %>
+        <div class="progress col-8" style="height: 9px">
+          <div class="progress-bar bg-social" role="progressbar" style="width: <%= (current_user.social_count.to_f / 6) * 50 %>%" aria-valuenow="<%= current_user.social_count %>" aria-valuemin="0" aria-valuemax="6"></div>
+        </div>
+        <p class="progression-chiffre"><%= current_user.social_count %>/6</p>
+      <% end %>
     </div>
   </div>
+
 
   <div class="card-container">
     <% @missions.each do |mission| %>
@@ -53,4 +61,6 @@
       <% end %>
     <% end %>
   </div>
+</div>
+
 </div>

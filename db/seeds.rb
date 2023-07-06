@@ -28,19 +28,28 @@ puts "creating assos"
 
 fileasso1 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/t_Profile/v1687860070/th-5_e4nn3z.png")
 asso1 = Asso.new(nom: "spa", category: "animal", email: "spa@gmail.com", password: "password")
-asso1.photo.attach(io: fileasso1, filename: "jeanvaljean", content_type: "image/png")
+asso1.photo.attach(io: fileasso1, filename: "SPA", content_type: "image/png")
 asso1.save
 
 fileasso2 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688033554/pcvytibnr4cqkkw7r4056eeyyvcx-Profile.jpg_ydibbm.png")
 asso2 = Asso.new(nom: "les restaurants du coeur", category: "social", email: "restauducoeur@gmail.com", password: "password")
-asso2.photo.attach(io: fileasso2, filename: "jeanvaljean", content_type: "image/png")
+asso2.photo.attach(io: fileasso2, filename: "COEUR", content_type: "image/png")
 asso2.save
-
 
 fileasso3 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688033550/c5hzyp8yzcv0tuujcxx8ycjyzd06-Profile.jpg_fqe3he.png")
 asso3 = Asso.new(nom: "cleanmycalanques", category: "environnement", email: "clean@gmail.com", password: "password")
-asso3.photo.attach(io: fileasso3, filename: "jeanvaljean", content_type: "image/png")
+asso3.photo.attach(io: fileasso3, filename: "CLEAN", content_type: "image/png")
 asso3.save
+
+fileasso4 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688635895/images_qkmlgl.png")
+asso4 = Asso.new(nom: "Banque Alimentaires", category: "social", email: "banque@gmail.com", password: "password")
+asso4.photo.attach(io: fileasso4, filename: "BANQUE", content_type: "image/png")
+asso4.save
+
+fileasso5 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688636762/logo_iddwdm.jpg")
+asso5 = Asso.new(nom: "Sea Cleaner", category: "environnement", email: "seacleaner@gmail.com", password: "password")
+asso5.photo.attach(io: fileasso5, filename: "SEA", content_type: "image/png")
+asso5.save
 
 puts "creating missions"
 
@@ -122,8 +131,23 @@ mission9 = Mission.new(asso: asso3, date_création: "20/06/2023", nom: "Sensibil
 mission9.photo.attach(io: filemission9, filename: "cleanasso", content_type: "image/png")
 mission9.save!
 
+filemission10 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688634128/t%C3%A9l%C3%A9chargement_30_zrzglh.jpg")
+mission10 = Mission.new(asso: asso1, date_création: "20/06/2023", nom: "Sensibilisation contre l'abandon", temps: "2", description: "La SPA dénonce les comportements cruels et barbares à travers des combats éthiques. Elle est déterminée à faire évoluer les mentalités et les lois pour redonner aux animaux la place qui leur est due. Elle se positionne sur plusieurs combats essentiels de la protection animale : l’animal-objet, la corrida, les divertissements avec animaux, l’élevage des animaux pour leur fourrure, l’expérimentation animale...", localisation: "04000 Digne-les-Bains, France", date: "20/08/2023", photo_url: "photo", category: "animal", participants_max: 20, latitude: 44.0918144 , longitude:6.2351431 )
+mission10.photo.attach(io: filemission10, filename: "spaasso", content_type: "image/png")
+mission10.save!
+
+filemission11 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688635958/2000005689530_khdi4c.webp")
+mission11 = Mission.new(asso: asso4, date_création: "20/06/2023", nom: "collecte de dons alimentaire", temps: "4", description: "Depuis plus de 35 ans, les Banques Alimentaires travaillent au quotidien pour lutter contre la précarité alimentaire. « Collecter, gérer et partager les denrées alimentaires pour aider l'Homme à se restaurer », voici la définition proposée par la charte de la Fédération française des Banques Alimentaires.", localisation: "210 Av. de Bredasque, Aix-en-Provence", date: "20/08/2023", photo_url: "photo", category: "social", participants_max: 40, latitude: 43.5330605 , longitude: 5.4191187 )
+mission11.photo.attach(io: filemission11, filename: "foodbanqueasso", content_type: "image/png")
+mission11.save!
+
+filemission12 = URI.open("https://res.cloudinary.com/dkx9xgzon/image/upload/v1688636480/1_yv4wpl.png")
+mission12 = Mission.new(asso: asso5, date_création: "10/08/2023", nom: "Recuperation de plastiques dans le mer", temps: "5", description: "“Agir pour un océan sans pollution est une nécessité de survie et une promesse que nous faisons à notre futur. C'est aussi défendre une aspiration à la beauté et à la liberté qui nous anime tous.”", localisation: "50 Bd Franck Pilatte, Nice", date: "10/08/2023", photo_url: "photo", category: "environnement", participants_max: 150, latitude: 43.6921283 , longitude: 7.2899846  )
+mission12.photo.attach(io: filemission12, filename: "seacleanerasso", content_type: "image/png")
+mission12.save!
 
 puts "creating chatrooms"
+
 Chatroom.create!(mission: mission1)
 Chatroom.create!(mission: mission2)
 Chatroom.create!(mission: mission3)
@@ -133,7 +157,8 @@ Chatroom.create!(mission: mission6)
 Chatroom.create!(mission: mission7)
 Chatroom.create!(mission: mission8)
 Chatroom.create!(mission: mission9)
-
-
+Chatroom.create!(mission: mission10)
+Chatroom.create!(mission: mission11)
+Chatroom.create!(mission: mission12)
 
 puts "AMENOOOOOOOOOOOOOOOOOOOOOOOOO"
