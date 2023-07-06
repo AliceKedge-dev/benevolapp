@@ -20,13 +20,8 @@ class PagesController < ApplicationController
     @chatroom = Chatroom.last
 
     current_user.animal_count < 3 ? @url_animal = "badge-patte-0.png" : @url_animal = "badge-patte-bronze.png"
-    @url_animal = (3..5).include?(current_user.animal_count) ? "badge-patte-bronze.png" : "badge-patte.png"
-
     current_user.social_count < 3 ? @url_social = "badge-social-0.png" : @url_social = "badge-social.png"
-    @url_social = (3..5).include?(current_user.social_count) ? "badge-social.png" : "badge-social-silver.png"
-
     current_user.environnement_count < 3 ? @url_environnement = "badge-environnement-0.png" : @url_environnement = "badge-environnement.png"
-    @url_environnement = (3..5).include?(current_user.environnement_count) ? "badge-environnement.png" : "badge-environnement-silver.png"
   end
 
   def index
